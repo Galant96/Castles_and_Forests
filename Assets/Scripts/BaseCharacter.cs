@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public abstract class BaseCharacter : MonoBehaviour, IBaseCharacter
 {
@@ -19,8 +17,8 @@ public abstract class BaseCharacter : MonoBehaviour, IBaseCharacter
 	private Animator animator;
 	public Animator Animator { get => animator;}
 
-	private Collider2D myCollider2D;
-	public Collider2D MyCollider2D { get => myCollider2D; }
+	private CapsuleCollider2D myBodyCollider2D;
+	public CapsuleCollider2D MyBodyCollider2D { get => myBodyCollider2D; }
 
 	// Methods
 	protected virtual void Start()
@@ -28,7 +26,7 @@ public abstract class BaseCharacter : MonoBehaviour, IBaseCharacter
 		// Caching a variable
 		myRigidbody2D = GetComponent<Rigidbody2D>();
 		animator = GetComponent<Animator>();
-		myCollider2D = GetComponent<Collider2D>();
+		myBodyCollider2D = GetComponent<CapsuleCollider2D>();
 	}
 
 	protected virtual void FlipSprite()

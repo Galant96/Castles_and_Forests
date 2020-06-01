@@ -16,6 +16,24 @@ MonoBehaviour:
     type: 3}
   m_DefaultColliderType: 1
   m_TilingRules:
+  - m_Neighbors: 0200000001000000010000000200000001000000000000000000000000000000
+    m_Sprites:
+    - {fileID: 6472973572313500141, guid: 614502bdb2451c14eaf8718684e3310c, type: 3}
+    m_AnimationSpeed: 1
+    m_PerlinScale: 0.5
+    m_RuleTransform: 0
+    m_Output: 0
+    m_ColliderType: 1
+    m_RandomTransform: 0
+  - m_Neighbors: 0100000001000000020000000100000002000000000000000000000000000000
+    m_Sprites:
+    - {fileID: -5730861216043237464, guid: 614502bdb2451c14eaf8718684e3310c, type: 3}
+    m_AnimationSpeed: 1
+    m_PerlinScale: 0.5
+    m_RuleTransform: 0
+    m_Output: 0
+    m_ColliderType: 1
+    m_RandomTransform: 0
   - m_Neighbors: 0000000001000000000000000000000000000000000000000000000000000000
     m_Sprites:
     - {fileID: 8308594865298027293, guid: 614502bdb2451c14eaf8718684e3310c, type: 3}

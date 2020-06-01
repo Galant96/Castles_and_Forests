@@ -1,0 +1,1046 @@
+fileFormatVersion: 2
+guid: 7d0aa285fa51fe54c941367dc704c4f9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8435058743925233545
+    second: DecorsAllTogetherStatic32x32_0
+  - first:
+      213: 5829499922886672812
+    second: DecorsAllTogetherStatic32x32_1
+  - first:
+      213: 500565753940605097
+    second: DecorsAllTogetherStatic32x32_2
+  - first:
+      213: 1741522264789745829
+    second: DecorsAllTogetherStatic32x32_3
+  - first:
+      213: 3934295079501273856
+    second: DecorsAllTogetherStatic32x32_4
+  - first:
+      213: -4189614544277627280
+    second: DecorsAllTogetherStatic32x32_5
+  - first:
+      213: 3000330493608868534
+    second: DecorsAllTogetherStatic32x32_6
+  - first:
+      213: -8382798634538930733
+    second: DecorsAllTogetherStatic32x32_7
+  - first:
+      213: -5262936408235984919
+    second: DecorsAllTogetherStatic32x32_8
+  - first:
+      213: 6206840036269775902
+    second: DecorsAllTogetherStatic32x32_9
+  - first:
+      213: 415472601784836455
+    second: DecorsAllTogetherStatic32x32_10
+  - first:
+      213: 3808140245047829869
+    second: DecorsAllTogetherStatic32x32_11
+  - first:
+      213: -5276571111819287145
+    second: DecorsAllTogetherStatic32x32_12
+  - first:
+      213: -6656933033879842503
+    second: DecorsAllTogetherStatic32x32_13
+  - first:
+      213: -2722611078835070960
+    second: DecorsAllTogetherStatic32x32_14
+  - first:
+      213: 3881069598894748748
+    second: DecorsAllTogetherStatic32x32_15
+  - first:
+      213: -7067518488924882686
+    second: DecorsAllTogetherStatic32x32_16
+  - first:
+      213: 1822051381046874279
+    second: DecorsAllTogetherStatic32x32_17
+  - first:
+      213: 5206707159855700091
+    second: DecorsAllTogetherStatic32x32_18
+  - first:
+      213: -3752848483390193506
+    second: DecorsAllTogetherStatic32x32_19
+  - first:
+      213: 3244924820246162720
+    second: DecorsAllTogetherStatic32x32_20
+  - first:
+      213: 906103066081183158
+    second: DecorsAllTogetherStatic32x32_21
+  - first:
+      213: -4341211428554829415
+    second: DecorsAllTogetherStatic32x32_22
+  - first:
+      213: 2184673136990905385
+    second: DecorsAllTogetherStatic32x32_23
+  - first:
+      213: 7220877803203800381
+    second: DecorsAllTogetherStatic32x32_24
+  - first:
+      213: -5372730261943755814
+    second: DecorsAllTogetherStatic32x32_25
+  - first:
+      213: 2735646142021641172
+    second: DecorsAllTogetherStatic32x32_26
+  - first:
+      213: -6580673913008756035
+    second: DecorsAllTogetherStatic32x32_27
+  - first:
+      213: 5442102690039267069
+    second: DecorsAllTogetherStatic32x32_28
+  - first:
+      213: 6639632183260661330
+    second: DecorsAllTogetherStatic32x32_29
+  - first:
+      213: -8382343909031790295
+    second: DecorsAllTogetherStatic32x32_30
+  - first:
+      213: -5405665034693861147
+    second: DecorsAllTogetherStatic32x32_31
+  - first:
+      213: 3914264441380554028
+    second: DecorsAllTogetherStatic32x32_32
+  - first:
+      213: -6522598952488339743
+    second: DecorsAllTogetherStatic32x32_33
+  - first:
+      213: -5324068313120176290
+    second: DecorsAllTogetherStatic32x32_34
+  - first:
+      213: -196929063292460675
+    second: DecorsAllTogetherStatic32x32_35
+  - first:
+      213: -5130748669312141804
+    second: DecorsAllTogetherStatic32x32_36
+  - first:
+      213: -7756871530198454852
+    second: DecorsAllTogetherStatic32x32_37
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DecorsAllTogetherStatic32x32_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 224
+        width: 22
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ef0f680e7b5e304881e799a3b736cd3
+      internalID: -8435058743925233545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DecorsAllTogetherStatic32x32_1
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 224
+        width: 20
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3cfbb3fdace48a4a8afd361948018b0
+      internalID: 5829499922886672812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DecorsAllTogetherStatic32x32_2
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 224
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed87ee801cf279649b36b5fd29bae28a
+      internalID: 500565753940605097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DecorsAllTogetherStatic32x32_3
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 224
+        width: 28
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eaddc2bdc21a3445bb61e7ce82e51fc
+      internalID: 1741522264789745829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DecorsAllTogetherStatic32x32_4
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 224
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5251918c1b4023b4fa9f9693319a38f2
+      internalID: 3934295079501273856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DecorsAllTogetherStatic32x32_5
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 224
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 378a8028ec83f1c46b10d5e9c326c0ff
+      internalID: -4189614544277627280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DecorsAllTogetherStatic32x32_6
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 224
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7abcb0ab3a0131a46b7814285cd91a74
+      internalID: 3000330493608868534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DecorsAllTogetherStatic32x32_7
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 224
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24619347092b7754fb0abb2b9da6bf06
+      internalID: -8382798634538930733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DecorsAllTogetherStatic32x32_8
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 224
+        width: 48
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab508e495d28c5c4782fa37b142d2ec3
+      internalID: -5262936408235984919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DecorsAllTogetherStatic32x32_9
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 192
+        width: 23
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7d928b606df0874b970726c0f1d0165
+      internalID: 6206840036269775902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DecorsAllTogetherStatic32x32_10
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 192
+        width: 28
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 102ee6c3d56bbca4b9094508b2fd0151
+      internalID: 415472601784836455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DecorsAllTogetherStatic32x32_11
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 192
+        width: 31
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 136e35b90b7a8d748b5e0deb98843c81
+      internalID: 3808140245047829869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DecorsAllTogetherStatic32x32_12
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 192
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0267366dd172195469f621f80b4eb81d
+      internalID: -5276571111819287145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DecorsAllTogetherStatic32x32_13
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 192
+        width: 45
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5ae3578b7477e745bf32a198252711a
+      internalID: -6656933033879842503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DecorsAllTogetherStatic32x32_14
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 192
+        width: 117
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f247d0646c49d2b4ea7384b3cdef6d2c
+      internalID: -2722611078835070960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DecorsAllTogetherStatic32x32_15
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 128
+        width: 21
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a9ad003582ac9341b0fa5d73b5b9067
+      internalID: 3881069598894748748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DecorsAllTogetherStatic32x32_16
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 128
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe83b6d98c20dbb4abb339277c6997b2
+      internalID: -7067518488924882686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DecorsAllTogetherStatic32x32_17
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 128
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6047489d10d611947988fe8b85a56a9b
+      internalID: 1822051381046874279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DecorsAllTogetherStatic32x32_18
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 128
+        width: 7
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eaaea1ad3dcd674fa6d69d37a16f50e
+      internalID: 5206707159855700091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DecorsAllTogetherStatic32x32_19
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 128
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2a9cb453a4c96e4e8c848d158c0325b
+      internalID: -3752848483390193506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DecorsAllTogetherStatic32x32_20
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 128
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef05ea7e81bbbbd49befe5211a30078e
+      internalID: 3244924820246162720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DecorsAllTogetherStatic32x32_21
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 32
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12af32dcef9f7754ab0d1ef2d0cc7537
+      internalID: 906103066081183158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DecorsAllTogetherStatic32x32_22
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 128
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 703ba61deffc0a54e8d3c44ce7159d8c
+      internalID: -4341211428554829415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DecorsAllTogetherStatic32x32_23
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 128
+        width: 52
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed57b322feb47a941bc44a8ada5d43a9
+      internalID: 2184673136990905385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DecorsAllTogetherStatic32x32_24
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 64
+        width: 91
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5299abe4f76a8142a2ae5e77ea5ba4b
+      internalID: 7220877803203800381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DecorsAllTogetherStatic32x32_25
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 64
+        width: 25
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ed45113fff4b874f8c07e34c615c21c
+      internalID: -5372730261943755814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DecorsAllTogetherStatic32x32_26
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 32
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2763cd9ca655124f8d04f4ba79056c4
+      internalID: 2735646142021641172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DecorsAllTogetherStatic32x32_27
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 64
+        width: 44
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c1ffa6b9181e9b40aba3a9d59d761bf
+      internalID: -6580673913008756035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DecorsAllTogetherStatic32x32_28
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 64
+        width: 17
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf0a042846d99b445bb221b9606d14b2
+      internalID: 5442102690039267069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DecorsAllTogetherStatic32x32_29
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 64
+        width: 59
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ebee2bf33bcfa947abeb1d87f18d4fa
+      internalID: 6639632183260661330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DecorsAllTogetherStatic32x32_30
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 0
+        width: 43
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd638e2988ce74e4ca868997fb178740
+      internalID: -8382343909031790295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DecorsAllTogetherStatic32x32_31
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 0
+        width: 26
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a9175151ecaed34b852df28b396a232
+      internalID: -5405665034693861147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DecorsAllTogetherStatic32x32_32
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 0
+        width: 42
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef005dcc98146ef4ea85e31ded121da8
+      internalID: 3914264441380554028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DecorsAllTogetherStatic32x32_33
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 0
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4907930fabb04c34d9f1e17029b5d2e5
+      internalID: -6522598952488339743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DecorsAllTogetherStatic32x32_34
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 0
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8280de7158dbafe4daabd43486cbfb24
+      internalID: -5324068313120176290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DecorsAllTogetherStatic32x32_35
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 0
+        width: 29
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c0bc5d32736bf247a139fc2175fbcfe
+      internalID: -196929063292460675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DecorsAllTogetherStatic32x32_36
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 0
+        width: 24
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d33d4d73b1fb4f04cb31b7401475f8a2
+      internalID: -5130748669312141804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DecorsAllTogetherStatic32x32_37
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 0
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6201a4d3aa42bc840b019a0f474f7624
+      internalID: -7756871530198454852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 6b4ceee4a5b92aa40b54864354d54e54
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

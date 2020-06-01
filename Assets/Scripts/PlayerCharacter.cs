@@ -1,32 +1,57 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityStandardAssets.CrossPlatformInput; // Get cross platform input
+﻿using UnityEngine;
+//using UnityStandardAssets.CrossPlatformInput; // Get cross platform input
 
 public class PlayerCharacter : BaseCharacter
 {
 	// Config
 	[SerializeField]
 	private float jumpSpeed = 5f;
+	[SerializeField]
+	private float climbSpeed = 5f;
+	[SerializeField]
+	Vector2 deathKick = new Vector2(25f, 25f);
 
+	[SerializeField]
+	private Joystick joystick = null;
+
+	private BoxCollider2D myFeetBoxCollider;
+	private CircleCollider2D weapon;
+
+
+	private bool isAlive = true;
+
+	// Events
+	[SerializeField, Header("Register to know when player is died")]
+	private OnPlayerHit onPlayerHit;
 
 	// Start is called before the first frame update
 	protected override void Start()
     {
 		base.Start();
-    }
+		if (joystick == null)
+		{
+			joystick = FindObjectOfType<Joystick>();
+		}
+		myFeetBoxCollider = GetComponent<BoxCollider2D>();
+		weapon = GetComponentInChildren<CircleCollider2D>();
+	}
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-		if (MyRigidbody2D != null)
+		// If player is not alive return
+		if (isAlive == false)
 		{
-			Move();
-			FlipSprite();
-			Jump();
-
-			Debug.Log(MyRigidbody2D.velocity);
+			return;
 		}
+
+		Die();
+		Move();
+		FlipSprite();
+		Jump();
+		ClimbLadder();
+		// Attack(); // Set to button control
+		Debug.Log(MyRigidbody2D.velocity);
 	}
 
 	protected override void FlipSprite()
@@ -34,19 +59,55 @@ public class PlayerCharacter : BaseCharacter
 		base.FlipSprite();
 	}
 
+	// Attack is performed by pushing the button
 	public override void Attack()
 	{
-		throw new System.NotImplementedException();
+		bool isPlayerStatic = MyRigidbody2D.velocity == Vector2.zero;
+
+		if (isPlayerStatic)
+		{
+			Animator.SetTrigger("Attacking");
+		}
 	}
+
+	// Enable or disable weapon via animation events
+	public void EnableWeapon()
+	{
+		// Enable weapon's collider while attacking
+		weapon.enabled = true;
+	}
+
+	public void DisableWeapon()
+	{
+		// Disable weapon's collider while attacking
+		weapon.enabled = false;
+	}
+
 
 	public override void Die()
 	{
-		throw new System.NotImplementedException();
+		if (MyBodyCollider2D.IsTouchingLayers(LayerMask.GetMask("Enemy", "Hazards")))
+		{
+			isAlive = false;
+
+			MyRigidbody2D.velocity = deathKick;
+			Animator.SetBool("Dying", true);
+			MyBodyCollider2D.enabled = false;
+
+			if (onPlayerHit != null)
+			{
+				// Invoke the event of the player's death from the game manager
+				onPlayerHit.Invoke();
+			}
+			
+			
+		}
 	}
 
 	public override void Move()
 	{
-		float controlThrow = CrossPlatformInputManager.GetAxis("Horizontal"); // Value is between -1 to +1
+		float controlThrow = joystick.Horizontal; // Value is between -1 to +1
+
 		Vector2 playerVelocity = new Vector2(controlThrow * Speed, MyRigidbody2D.velocity.y);
 		MyRigidbody2D.velocity = playerVelocity;
 
@@ -55,26 +116,53 @@ public class PlayerCharacter : BaseCharacter
 		Animator.SetBool("Running", isHorizontalSpeed);
 	}
 
+	private void ClimbLadder()
+	{
+		// Check if the player is climbing
+		if (!myFeetBoxCollider.IsTouchingLayers(LayerMask.GetMask("Climbing")))
+		{
+			return;
+		}
+
+		float controlThrow = joystick.Vertical;
+
+		if (controlThrow > 0)
+		{
+			Vector2 climbVelocity = new Vector2(MyRigidbody2D.velocity.x, controlThrow * climbSpeed);
+			MyRigidbody2D.velocity = climbVelocity;
+		}
+
+	}
+
 	private void Jump()
 	{
 		// Check if the player is grounded to prevent a double jump
-		if (!MyCollider2D.IsTouchingLayers(LayerMask.GetMask("Ground")))
+		if (!myFeetBoxCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
 		{
+			bool playerHasVerticalSpeed = Mathf.Abs(MyRigidbody2D.velocity.y) > Mathf.Epsilon;
+
 			Animator.SetBool("Jumping", true);
+
+			if (playerHasVerticalSpeed)
+			{
+				Animator.SetBool("Falling", true);
+				Animator.SetBool("Running", false);
+			}
+
 			return;
 		}
 		else
 		{
 			Animator.SetBool("Jumping", false);
-
+			Animator.SetBool("Falling", false);
 		}
 
+		float verticalMovement = joystick.Vertical;
 
-		if (CrossPlatformInputManager.GetButtonDown("Jump"))
+		if (verticalMovement >= 0.5f)
 		{
 			Vector2 jumpVelocity = new Vector2(0f, jumpSpeed);
 			MyRigidbody2D.velocity = jumpVelocity;
-
 		}
 	}
 

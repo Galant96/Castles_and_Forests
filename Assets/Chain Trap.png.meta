@@ -1,0 +1,422 @@
+fileFormatVersion: 2
+guid: c22e8fd4306687348adc4430011ddbf7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1282620283548700243
+    second: Cage with rope_0
+  - first:
+      213: 8691543032647770652
+    second: Cage with rope_1
+  - first:
+      213: 1048838549610843450
+    second: Cage with rope_2
+  - first:
+      213: 1719536328490599974
+    second: Cage with rope_3
+  - first:
+      213: -3826128039857428118
+    second: Cage with rope_4
+  - first:
+      213: 4209273392210884651
+    second: Cage with rope_5
+  - first:
+      213: -4992361655032843242
+    second: Cage with rope_6
+  - first:
+      213: -4120828776421863668
+    second: Cage with rope_7
+  - first:
+      213: 6449004048780824732
+    second: Cage with rope_8
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Cage with rope_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1
+        width: 18
+        height: 97
+      alignment: 9
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 48.5}
+        - {x: -2, y: 48.5}
+        - {x: -2, y: 0.5}
+        - {x: -9, y: 0.5}
+        - {x: -9, y: -36.5}
+        - {x: 9, y: -36.5}
+        - {x: 9, y: 0.5}
+        - {x: 2, y: 0.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22f95f9d1e9431144909585fc161062a
+      internalID: 1282620283548700243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cage with rope_1
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 7
+        width: 18
+        height: 90
+      alignment: 9
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 45}
+        - {x: -3, y: 45}
+        - {x: -2, y: 3}
+        - {x: -9, y: 3}
+        - {x: -9, y: -34}
+        - {x: 9, y: -34}
+        - {x: 9, y: 3}
+        - {x: 3, y: 3}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1a2d63acac7b4143b11ad8887a87204
+      internalID: 8691543032647770652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cage with rope_2
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 12
+        width: 18
+        height: 85
+      alignment: 9
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -2, y: 42.5}
+        - {x: -2, y: 6.5}
+        - {x: -9, y: 6.5}
+        - {x: -9, y: -29.5}
+        - {x: 9, y: -29.5}
+        - {x: 9, y: 6.5}
+        - {x: 3, y: 6.5}
+        - {x: 3, y: 42.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98ea385b8c663df468146cd907d79268
+      internalID: 1048838549610843450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cage with rope_3
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 18
+        width: 18
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -2, y: 40}
+        - {x: -2, y: 8}
+        - {x: -9, y: 8}
+        - {x: -9, y: -28}
+        - {x: 9, y: -28}
+        - {x: 9, y: 8}
+        - {x: 3, y: 8}
+        - {x: 3, y: 40}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7555da55478ca8d42a08380625681755
+      internalID: 1719536328490599974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cage with rope_4
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 24
+        width: 18
+        height: 73
+      alignment: 9
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -3, y: 36.5}
+        - {x: -3, y: 11.5}
+        - {x: -9, y: 11.5}
+        - {x: -9, y: -25.5}
+        - {x: 9, y: -25.5}
+        - {x: 9, y: 11.5}
+        - {x: 2, y: 11.5}
+        - {x: 2, y: 36.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 471acf0079d8c1a44b010c302c5fd83d
+      internalID: -3826128039857428118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cage with rope_5
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 29
+        width: 18
+        height: 68
+      alignment: 9
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -2, y: 34}
+        - {x: -2, y: 15}
+        - {x: -9, y: 15}
+        - {x: -9, y: -22}
+        - {x: 9, y: -22}
+        - {x: 9, y: 15}
+        - {x: 2, y: 15}
+        - {x: 2, y: 34}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5073d990c74a9f7468d59170268f0ed1
+      internalID: 4209273392210884651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cage with rope_6
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 35
+        width: 18
+        height: 62
+      alignment: 9
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 2, y: 31}
+        - {x: -2, y: 31}
+        - {x: -2, y: 18}
+        - {x: -9, y: 18}
+        - {x: -9, y: -19}
+        - {x: 9, y: -19}
+        - {x: 8, y: 18}
+        - {x: 2, y: 18}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f079963724382d4db8d6916b4b798d9
+      internalID: -4992361655032843242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cage with rope_7
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 41
+        width: 18
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -1, y: 28}
+        - {x: -1, y: 20}
+        - {x: -9, y: 20}
+        - {x: -9, y: -17}
+        - {x: 9, y: -17}
+        - {x: 9, y: 20}
+        - {x: 3, y: 20}
+        - {x: 3, y: 28}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 326418821135542429d966fb8feb1658
+      internalID: -4120828776421863668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cage with rope_8
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 46
+        width: 18
+        height: 51
+      alignment: 9
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -4, y: 25.5}
+        - {x: -4, y: 22.5}
+        - {x: -9, y: 22.5}
+        - {x: -9, y: -14.5}
+        - {x: 9, y: -14.5}
+        - {x: 9, y: 22.5}
+        - {x: 1, y: 22.5}
+        - {x: 1, y: 25.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c1b25e94277423448f27c59d06b6bc2
+      internalID: 6449004048780824732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: b2ffde63b22eee746bd69b7be5fc9d60
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
