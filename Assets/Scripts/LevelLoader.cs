@@ -18,7 +18,6 @@ public class LevelLoader : MonoBehaviour
 
 	private void Awake()
 	{
-		SetUpSingelton();
 		CurrentSceneIndex = GetSceneIndex();
 	}
 
@@ -27,19 +26,6 @@ public class LevelLoader : MonoBehaviour
 		if (CurrentSceneIndex != GetSceneIndex())
 		{
 			CurrentSceneIndex = GetSceneIndex();
-		}
-	}
-
-	private void SetUpSingelton()
-	{
-		if (Instance == null)
-		{
-			Instance = this;
-			DontDestroyOnLoad(gameObject);
-		}
-		else
-		{
-			Destroy(gameObject);
 		}
 	}
 

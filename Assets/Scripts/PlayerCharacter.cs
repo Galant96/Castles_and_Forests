@@ -19,6 +19,9 @@ public class PlayerCharacter : BaseCharacter
 
 	private bool isAlive = true;
 
+	[SerializeField]
+	private Sprite jumpingSprite = null;
+
 	// Events
 	//Register to know when player is died"
 	private OnPlayerHit onPlayerHit = null;
@@ -167,6 +170,7 @@ public class PlayerCharacter : BaseCharacter
 		}
 		else
 		{
+			Animator.enabled = true;
 			Animator.SetBool("Jumping", false);
 			Animator.SetBool("Falling", false);
 		}
@@ -180,4 +184,10 @@ public class PlayerCharacter : BaseCharacter
 		}
 	}
 
+	public void PauseJumping()
+	{
+		Animator.enabled = false;
+	}
 }
+
+

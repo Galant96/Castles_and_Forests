@@ -16,10 +16,6 @@ public class GameManager : MonoBehaviour
 	private void Awake()
 	{
 		SetUpSingelton();
-		if (levelLoader == null)
-		{
-			levelLoader = FindObjectOfType<LevelLoader>();
-		}
 	}
 
 	private void SetUpSingelton()
@@ -48,8 +44,11 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		
-    }
+		if (levelLoader == null)
+		{
+			levelLoader = FindObjectOfType<LevelLoader>();
+		}
+	}
 
 	public void ProcessPlayerDeath()
 	{
