@@ -16,6 +16,10 @@ public class GameManager : MonoBehaviour
 	private void Awake()
 	{
 		SetUpSingelton();
+		if (levelLoader == null)
+		{
+			levelLoader = FindObjectOfType<LevelLoader>();
+		}
 	}
 
 	private void SetUpSingelton()
@@ -49,8 +53,10 @@ public class GameManager : MonoBehaviour
 
 	public void ProcessPlayerDeath()
 	{
+		
 		if (playerLives > 1)
 		{
+			
 			TakeLife();
 		}
 		else
@@ -60,11 +66,17 @@ public class GameManager : MonoBehaviour
 
 	}
 
-	private void TakeLife()
+	IEnumerator PrepareToLoadingSceneAgain()
 	{
 		playerLives -= 1;
+		yield return new WaitForSeconds(2);
 		// Restart the level 
 		levelLoader.LoadTheSameSceneAgain();
+	}
+
+	private void TakeLife()
+	{
+		StartCoroutine(PrepareToLoadingSceneAgain());	
 	}
 
 	private void ResetGameSession()

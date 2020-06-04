@@ -14,15 +14,22 @@ public class PlayerCharacter : BaseCharacter
 	[SerializeField]
 	private Joystick joystick = null;
 
-	private BoxCollider2D myFeetBoxCollider;
-	private CircleCollider2D weapon;
-
+	private BoxCollider2D myFeetBoxCollider = null;
+	private CircleCollider2D weapon = null;
 
 	private bool isAlive = true;
 
 	// Events
-	[SerializeField, Header("Register to know when player is died")]
-	private OnPlayerHit onPlayerHit;
+	//Register to know when player is died"
+	private OnPlayerHit onPlayerHit = null;
+
+	private void Awake()
+	{
+		GameManager gameManager = FindObjectOfType<GameManager>();
+		onPlayerHit = new OnPlayerHit();
+		onPlayerHit.RemoveAllListeners();
+		onPlayerHit.AddListener(() => gameManager.ProcessPlayerDeath());
+	}
 
 	// Start is called before the first frame update
 	protected override void Start()
@@ -37,7 +44,7 @@ public class PlayerCharacter : BaseCharacter
 	}
 
     // Update is called once per frame
-    private void Update()
+    private void FixedUpdate()
     {
 		// If player is not alive return
 		if (isAlive == false)
@@ -49,7 +56,7 @@ public class PlayerCharacter : BaseCharacter
 		Move();
 		FlipSprite();
 		Jump();
-		ClimbLadder();
+		Climb();
 		// Attack(); // Set to button control
 		Debug.Log(MyRigidbody2D.velocity);
 	}
@@ -98,9 +105,7 @@ public class PlayerCharacter : BaseCharacter
 			{
 				// Invoke the event of the player's death from the game manager
 				onPlayerHit.Invoke();
-			}
-			
-			
+			}	
 		}
 	}
 
@@ -116,7 +121,7 @@ public class PlayerCharacter : BaseCharacter
 		Animator.SetBool("Running", isHorizontalSpeed);
 	}
 
-	private void ClimbLadder()
+	private void Climb()
 	{
 		// Check if the player is climbing
 		if (!myFeetBoxCollider.IsTouchingLayers(LayerMask.GetMask("Climbing")))
@@ -139,14 +144,23 @@ public class PlayerCharacter : BaseCharacter
 		// Check if the player is grounded to prevent a double jump
 		if (!myFeetBoxCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
 		{
-			bool playerHasVerticalSpeed = Mathf.Abs(MyRigidbody2D.velocity.y) > Mathf.Epsilon;
+			bool playerHasVerticalSpeed = MyRigidbody2D.velocity.y > 0;
 
-			Animator.SetBool("Jumping", true);
+			Debug.Log(MyRigidbody2D.velocity.y);
 
 			if (playerHasVerticalSpeed)
 			{
+				Animator.SetBool("Jumping", true);
+				Animator.SetBool("Falling", false);
+				Animator.SetBool("Running", false);
+
+			}
+			else
+			{
+				Animator.SetBool("Jumping", false);
 				Animator.SetBool("Falling", true);
 				Animator.SetBool("Running", false);
+
 			}
 
 			return;
