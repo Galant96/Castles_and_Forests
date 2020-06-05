@@ -1,10 +1,14 @@
 ﻿using UnityEngine;
+using System.Collections;
 using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour
 {
 	// Keeps an instance of the object
 	public static LevelLoader Instance { get; private set; }
+
+	[SerializeField]
+	private float animationTime = 1f;
 
 	private int currentSceneIndex = 0;
 
@@ -36,7 +40,7 @@ public class LevelLoader : MonoBehaviour
 
 	public void LoadMainMenu()
 	{
-		SceneManager.LoadScene("Main Menu");
+		StartCoroutine(WaitForAnimation("Main Menu"));
 	}
 
 	public void LoadOptions()
@@ -72,7 +76,23 @@ public class LevelLoader : MonoBehaviour
 
 	public void LoadFirstLevel()
 	{
-		SceneManager.LoadScene(1);
+		StartCoroutine(WaitForAnimation(1));
+	}
+
+	// Untility methods to wait for an animation end
+	// After, load a needed scene
+	IEnumerator WaitForAnimation(string animationName)
+	{
+		Debug.Log("Loading a scene...");
+		yield return new WaitForSeconds(animationTime);
+		SceneManager.LoadScene(animationName);
+	}
+
+	IEnumerator WaitForAnimation(int animationIndex)
+	{
+		Debug.Log("Loading a scene...");
+		yield return new WaitForSeconds(animationTime);
+		SceneManager.LoadScene(animationIndex);
 	}
 
 }

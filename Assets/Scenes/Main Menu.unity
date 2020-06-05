@@ -254,7 +254,7 @@ GameObject:
   - component: {fileID: 159794483}
   - component: {fileID: 159794482}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Sword Image UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -323,11 +323,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1046287329}
     m_Modifications:
-    - target: {fileID: 2929252283123773939, guid: aaa2c939c0359ac4dbce3f49e8b90252,
-        type: 3}
-      propertyPath: m_Name
-      value: Fixed Joystick
-      objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -433,15 +428,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 2929252285020697096, guid: aaa2c939c0359ac4dbce3f49e8b90252,
+    - target: {fileID: 2929252283123773939, guid: aaa2c939c0359ac4dbce3f49e8b90252,
         type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 256
-      objectReference: {fileID: 0}
-    - target: {fileID: 2929252285020697096, guid: aaa2c939c0359ac4dbce3f49e8b90252,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 256
+      propertyPath: m_Name
+      value: Fixed Joystick
       objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773937, guid: aaa2c939c0359ac4dbce3f49e8b90252,
         type: 3}
@@ -457,6 +447,16 @@ PrefabInstance:
         type: 3}
       propertyPath: snapY
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2929252285020697096, guid: aaa2c939c0359ac4dbce3f49e8b90252,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 2929252285020697096, guid: aaa2c939c0359ac4dbce3f49e8b90252,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 2929252285020698103, guid: aaa2c939c0359ac4dbce3f49e8b90252,
         type: 3}
@@ -810,7 +810,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 77009931f262f0846a4346d00ae18886, type: 2}
+  - {fileID: 2100000, guid: fd4c511757ae638419aa9b64741dd5b7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3416,7 +3416,7 @@ GameObject:
   - component: {fileID: 714276996}
   - component: {fileID: 714276995}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Sword Image UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4407,7 +4407,7 @@ Tilemap:
   - first: {x: 96, y: 6, z: 0}
     second:
       m_TileIndex: 1
-      m_TileSpriteIndex: 12
+      m_TileSpriteIndex: 9
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -4416,7 +4416,7 @@ Tilemap:
   - first: {x: 97, y: 6, z: 0}
     second:
       m_TileIndex: 1
-      m_TileSpriteIndex: 12
+      m_TileSpriteIndex: 9
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -4425,7 +4425,7 @@ Tilemap:
   - first: {x: 98, y: 6, z: 0}
     second:
       m_TileIndex: 1
-      m_TileSpriteIndex: 12
+      m_TileSpriteIndex: 8
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -4434,7 +4434,7 @@ Tilemap:
   - first: {x: 99, y: 6, z: 0}
     second:
       m_TileIndex: 1
-      m_TileSpriteIndex: 12
+      m_TileSpriteIndex: 8
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -4443,7 +4443,7 @@ Tilemap:
   - first: {x: 100, y: 6, z: 0}
     second:
       m_TileIndex: 1
-      m_TileSpriteIndex: 12
+      m_TileSpriteIndex: 11
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -4452,7 +4452,7 @@ Tilemap:
   - first: {x: 101, y: 6, z: 0}
     second:
       m_TileIndex: 1
-      m_TileSpriteIndex: 11
+      m_TileSpriteIndex: 12
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -4461,7 +4461,7 @@ Tilemap:
   - first: {x: 102, y: 6, z: 0}
     second:
       m_TileIndex: 1
-      m_TileSpriteIndex: 12
+      m_TileSpriteIndex: 11
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -4470,7 +4470,7 @@ Tilemap:
   - first: {x: 103, y: 6, z: 0}
     second:
       m_TileIndex: 1
-      m_TileSpriteIndex: 10
+      m_TileSpriteIndex: 8
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -4479,7 +4479,7 @@ Tilemap:
   - first: {x: 104, y: 6, z: 0}
     second:
       m_TileIndex: 1
-      m_TileSpriteIndex: 12
+      m_TileSpriteIndex: 9
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -4488,7 +4488,7 @@ Tilemap:
   - first: {x: 105, y: 6, z: 0}
     second:
       m_TileIndex: 1
-      m_TileSpriteIndex: 11
+      m_TileSpriteIndex: 8
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -4497,7 +4497,7 @@ Tilemap:
   - first: {x: 106, y: 6, z: 0}
     second:
       m_TileIndex: 1
-      m_TileSpriteIndex: 12
+      m_TileSpriteIndex: 10
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -4515,7 +4515,7 @@ Tilemap:
   - first: {x: 108, y: 6, z: 0}
     second:
       m_TileIndex: 1
-      m_TileSpriteIndex: 12
+      m_TileSpriteIndex: 11
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -4524,7 +4524,7 @@ Tilemap:
   - first: {x: 109, y: 6, z: 0}
     second:
       m_TileIndex: 1
-      m_TileSpriteIndex: 9
+      m_TileSpriteIndex: 11
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -4533,7 +4533,7 @@ Tilemap:
   - first: {x: 110, y: 6, z: 0}
     second:
       m_TileIndex: 1
-      m_TileSpriteIndex: 12
+      m_TileSpriteIndex: 8
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -4542,7 +4542,7 @@ Tilemap:
   - first: {x: 111, y: 6, z: 0}
     second:
       m_TileIndex: 1
-      m_TileSpriteIndex: 8
+      m_TileSpriteIndex: 12
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -4551,7 +4551,7 @@ Tilemap:
   - first: {x: 112, y: 6, z: 0}
     second:
       m_TileIndex: 1
-      m_TileSpriteIndex: 12
+      m_TileSpriteIndex: 11
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -4560,7 +4560,7 @@ Tilemap:
   - first: {x: 113, y: 6, z: 0}
     second:
       m_TileIndex: 1
-      m_TileSpriteIndex: 12
+      m_TileSpriteIndex: 10
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -4778,19 +4778,19 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
+  - m_RefCount: 5
     m_Data: {fileID: -8476322359060891727, guid: 614502bdb2451c14eaf8718684e3310c,
       type: 3}
-  - m_RefCount: 1
+  - m_RefCount: 3
     m_Data: {fileID: 7896105257111348351, guid: 614502bdb2451c14eaf8718684e3310c,
       type: 3}
-  - m_RefCount: 1
+  - m_RefCount: 2
     m_Data: {fileID: 5688617997451597958, guid: 614502bdb2451c14eaf8718684e3310c,
       type: 3}
-  - m_RefCount: 3
+  - m_RefCount: 6
     m_Data: {fileID: -219257030404347373, guid: 614502bdb2451c14eaf8718684e3310c,
       type: 3}
-  - m_RefCount: 12
+  - m_RefCount: 2
     m_Data: {fileID: 6786053163097523044, guid: 614502bdb2451c14eaf8718684e3310c,
       type: 3}
   - m_RefCount: 1
@@ -4914,56 +4914,56 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 768806799}
     m_ColliderPaths:
-    - - X: 1140161251
+    - - X: 1140161222
         Y: -50161292
-      - X: 1140161309
+      - X: 1140161338
         Y: -49516128
-      - X: 1148225799
-        Y: -49516111
+      - X: 1148225806
+        Y: -49516094
       - X: 1150161280
-        Y: -44999995
-      - X: 1150161251
+        Y: -44999990
+      - X: 1150161222
         Y: 80161288
-      - X: 950483834
-        Y: 80161280
+      - X: 950483828
+        Y: 80161272
       - X: 949838720
-        Y: 79516116
-      - X: 949838723
-        Y: -43064521
-      - X: 951129028
-        Y: -45645164
-      - X: 955645129
+        Y: 79516104
+      - X: 949838726
+        Y: -43064526
+      - X: 951129032
+        Y: -45645168
+      - X: 955645138
         Y: -49516128
       - X: 959838720
-        Y: -49516157
-      - X: 959838749
+        Y: -49516186
+      - X: 959838778
         Y: -50161292
     - - X: 1129838720
-        Y: -29838681
+        Y: -29838652
       - X: 970161280
-        Y: -29838681
-      - X: 970161309
+        Y: -29838652
+      - X: 970161338
         Y: 49838708
       - X: 1129838720
-        Y: 49838679
+        Y: 49838650
   m_CompositePaths:
     m_Paths:
-    - - {x: 114.01613, y: -5.0261297}
-      - {x: 114.01613, y: -4.961613}
-      - {x: 114.82258, y: -4.96161}
-      - {x: 115.01613, y: -4.5099993}
-      - {x: 115.01613, y: 8.006128}
-      - {x: 95.048386, y: 8.006127}
-      - {x: 94.98387, y: 7.9416103}
-      - {x: 94.98387, y: -4.316453}
+    - - {x: 114.01611, y: -5.0261297}
+      - {x: 114.01614, y: -4.961613}
+      - {x: 114.82258, y: -4.961608}
+      - {x: 115.01613, y: -4.509999}
+      - {x: 115.01611, y: 8.006128}
+      - {x: 95.048386, y: 8.006126}
+      - {x: 94.98387, y: 7.9416094}
+      - {x: 94.98387, y: -4.3164535}
       - {x: 95.1129, y: -4.5745173}
       - {x: 95.564514, y: -4.961613}
-      - {x: 95.98387, y: -4.961619}
+      - {x: 95.98387, y: -4.9616218}
       - {x: 95.98388, y: -5.0261297}
-    - - {x: 112.98387, y: -2.9938653}
-      - {x: 97.01613, y: -2.9938653}
+    - - {x: 112.98387, y: -2.9938624}
+      - {x: 97.01613, y: -2.9938624}
       - {x: 97.016136, y: 4.9738708}
-      - {x: 112.98387, y: 4.9738646}
+      - {x: 112.98387, y: 4.9738617}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.000005
 --- !u!19719996 &768806799
@@ -5250,7 +5250,7 @@ GameObject:
   - component: {fileID: 1217353945}
   - component: {fileID: 1217353944}
   m_Layer: 5
-  m_Name: ExitText
+  m_Name: Exit Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5488,6 +5488,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Play
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1095732082}
+        m_MethodName: LoadMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -6478,7 +6489,7 @@ GameObject:
   - component: {fileID: 1454957679}
   - component: {fileID: 1454957678}
   m_Layer: 5
-  m_Name: ExitButton
+  m_Name: Exit Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6704,7 +6715,7 @@ GameObject:
   - component: {fileID: 1783574943}
   - component: {fileID: 1783574942}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Sword Image UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7252,7 +7263,7 @@ GameObject:
   - component: {fileID: 1953291955}
   - component: {fileID: 1953291954}
   m_Layer: 5
-  m_Name: CreditsText
+  m_Name: Credits Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7479,7 +7490,7 @@ GameObject:
   - component: {fileID: 2129434540}
   - component: {fileID: 2129434539}
   m_Layer: 5
-  m_Name: OptionsText
+  m_Name: Options Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

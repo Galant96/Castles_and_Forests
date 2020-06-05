@@ -176,8 +176,10 @@ MonoBehaviour:
     - {fileID: 6786053163097523044, guid: 614502bdb2451c14eaf8718684e3310c, type: 3}
     - {fileID: -219257030404347373, guid: 614502bdb2451c14eaf8718684e3310c, type: 3}
     - {fileID: -8476322359060891727, guid: 614502bdb2451c14eaf8718684e3310c, type: 3}
+    - {fileID: 7896105257111348351, guid: 614502bdb2451c14eaf8718684e3310c, type: 3}
+    - {fileID: 7896105257111348351, guid: 614502bdb2451c14eaf8718684e3310c, type: 3}
     m_AnimationSpeed: 1
-    m_PerlinScale: 0.5
+    m_PerlinScale: 0.6
     m_RuleTransform: 0
     m_Output: 1
     m_ColliderType: 1

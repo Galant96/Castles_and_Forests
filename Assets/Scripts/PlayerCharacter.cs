@@ -19,9 +19,6 @@ public class PlayerCharacter : BaseCharacter
 
 	private bool isAlive = true;
 
-	[SerializeField]
-	private Sprite jumpingSprite = null;
-
 	// Events
 	//Register to know when player is died"
 	private OnPlayerHit onPlayerHit = null;
@@ -30,7 +27,6 @@ public class PlayerCharacter : BaseCharacter
 	{
 		GameManager gameManager = FindObjectOfType<GameManager>();
 		onPlayerHit = new OnPlayerHit();
-		onPlayerHit.RemoveAllListeners();
 		onPlayerHit.AddListener(() => gameManager.ProcessPlayerDeath());
 	}
 

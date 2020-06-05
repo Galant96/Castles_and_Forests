@@ -38,7 +38,7 @@ public class Enemy : BaseCharacter
 		isAlive = false;
 		MyRigidbody2D.velocity = Vector2.zero;
 		Animator.SetTrigger("Dying");
-		Destroy(gameObject, 1f);
+		Destroy(gameObject, 0.5f);
 	}
 		
 	public void EnemyTakesDamage(bool isHit)
