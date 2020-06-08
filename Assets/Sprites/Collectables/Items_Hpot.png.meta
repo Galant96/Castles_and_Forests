@@ -1,34 +1,31 @@
 fileFormatVersion: 2
-guid: c22e8fd4306687348adc4430011ddbf7
+guid: 033faf4b673184c46b58fb5c75344599
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1282620283548700243
-    second: Cage with rope_0
+      213: -4837460695756556672
+    second: Items_Hpot_0
   - first:
-      213: 8691543032647770652
-    second: Cage with rope_1
+      213: -8278713172116008368
+    second: Items_Hpot_1
   - first:
-      213: 1048838549610843450
-    second: Cage with rope_2
+      213: 6091418807696715870
+    second: Items_Hpot_2
   - first:
-      213: 1719536328490599974
-    second: Cage with rope_3
+      213: -7676193402525645695
+    second: Items_Hpot_3
   - first:
-      213: -3826128039857428118
-    second: Cage with rope_4
+      213: 4047773115606441862
+    second: Items_Hpot_4
   - first:
-      213: 4209273392210884651
-    second: Cage with rope_5
+      213: -7938003154575464312
+    second: Items_Hpot_5
   - first:
-      213: -4992361655032843242
-    second: Cage with rope_6
+      213: -6443076214371620548
+    second: Items_Hpot_6
   - first:
-      213: -4120828776421863668
-    second: Cage with rope_7
-  - first:
-      213: 6449004048780824732
-    second: Cage with rope_8
+      213: 7647712402258024371
+    second: Items_Hpot_7
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -72,7 +69,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 20
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -144,262 +141,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cage with rope_0
+      name: Items_Hpot_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 1
-        width: 18
-        height: 97
-      alignment: 9
-      pivot: {x: 0.5, y: 1}
+        x: 0
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: 3, y: 48.5}
-        - {x: -2, y: 48.5}
-        - {x: -2, y: 0.5}
-        - {x: -9, y: 0.5}
-        - {x: -9, y: -36.5}
-        - {x: 9, y: -36.5}
-        - {x: 9, y: 0.5}
-        - {x: 2, y: 0.5}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22f95f9d1e9431144909585fc161062a
-      internalID: 1282620283548700243
+      spriteID: 99754d9f4b243324681e274287f5d1df
+      internalID: -4837460695756556672
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cage with rope_1
+      name: Items_Hpot_1
       rect:
         serializedVersion: 2
-        x: 34
-        y: 7
-        width: 18
-        height: 90
-      alignment: 9
-      pivot: {x: 0.5, y: 1}
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: 3, y: 45}
-        - {x: -3, y: 45}
-        - {x: -2, y: 3}
-        - {x: -9, y: 3}
-        - {x: -9, y: -34}
-        - {x: 9, y: -34}
-        - {x: 9, y: 3}
-        - {x: 3, y: 3}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1a2d63acac7b4143b11ad8887a87204
-      internalID: 8691543032647770652
+      spriteID: 0635b4a7d5da8614c8a5ec1c40ca413d
+      internalID: -8278713172116008368
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cage with rope_2
+      name: Items_Hpot_2
       rect:
         serializedVersion: 2
-        x: 63
-        y: 12
-        width: 18
-        height: 85
-      alignment: 9
-      pivot: {x: 0.5, y: 1}
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -2, y: 42.5}
-        - {x: -2, y: 6.5}
-        - {x: -9, y: 6.5}
-        - {x: -9, y: -29.5}
-        - {x: 9, y: -29.5}
-        - {x: 9, y: 6.5}
-        - {x: 3, y: 6.5}
-        - {x: 3, y: 42.5}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98ea385b8c663df468146cd907d79268
-      internalID: 1048838549610843450
+      spriteID: ceb0cf2dcdc2bbb4ab7625add63dfcf2
+      internalID: 6091418807696715870
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cage with rope_3
+      name: Items_Hpot_3
       rect:
         serializedVersion: 2
-        x: 93
-        y: 18
-        width: 18
-        height: 80
-      alignment: 9
-      pivot: {x: 0.5, y: 1}
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -2, y: 40}
-        - {x: -2, y: 8}
-        - {x: -9, y: 8}
-        - {x: -9, y: -28}
-        - {x: 9, y: -28}
-        - {x: 9, y: 8}
-        - {x: 3, y: 8}
-        - {x: 3, y: 40}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7555da55478ca8d42a08380625681755
-      internalID: 1719536328490599974
+      spriteID: 4d921f2460d595043a9812c87b3c7594
+      internalID: -7676193402525645695
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cage with rope_4
+      name: Items_Hpot_4
       rect:
         serializedVersion: 2
-        x: 123
-        y: 24
-        width: 18
-        height: 73
-      alignment: 9
-      pivot: {x: 0.5, y: 1}
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -3, y: 36.5}
-        - {x: -3, y: 11.5}
-        - {x: -9, y: 11.5}
-        - {x: -9, y: -25.5}
-        - {x: 9, y: -25.5}
-        - {x: 9, y: 11.5}
-        - {x: 2, y: 11.5}
-        - {x: 2, y: 36.5}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 471acf0079d8c1a44b010c302c5fd83d
-      internalID: -3826128039857428118
+      spriteID: 45127ce83344936419eac3b38647614c
+      internalID: 4047773115606441862
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cage with rope_5
+      name: Items_Hpot_5
       rect:
         serializedVersion: 2
-        x: 150
-        y: 29
-        width: 18
-        height: 68
-      alignment: 9
-      pivot: {x: 0.5, y: 1}
+        x: 80
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -2, y: 34}
-        - {x: -2, y: 15}
-        - {x: -9, y: 15}
-        - {x: -9, y: -22}
-        - {x: 9, y: -22}
-        - {x: 9, y: 15}
-        - {x: 2, y: 15}
-        - {x: 2, y: 34}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5073d990c74a9f7468d59170268f0ed1
-      internalID: 4209273392210884651
+      spriteID: ce0ae7e5eb464524db6307c8e13688e8
+      internalID: -7938003154575464312
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cage with rope_6
+      name: Items_Hpot_6
       rect:
         serializedVersion: 2
-        x: 176
-        y: 35
-        width: 18
-        height: 62
-      alignment: 9
-      pivot: {x: 0.5, y: 1}
+        x: 96
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: 2, y: 31}
-        - {x: -2, y: 31}
-        - {x: -2, y: 18}
-        - {x: -9, y: 18}
-        - {x: -9, y: -19}
-        - {x: 9, y: -19}
-        - {x: 8, y: 18}
-        - {x: 2, y: 18}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f079963724382d4db8d6916b4b798d9
-      internalID: -4992361655032843242
+      spriteID: 40f36f99b03a81c4caee10ddd0f853fd
+      internalID: -6443076214371620548
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cage with rope_7
+      name: Items_Hpot_7
       rect:
         serializedVersion: 2
-        x: 204
-        y: 41
-        width: 18
-        height: 56
-      alignment: 9
-      pivot: {x: 0.5, y: 1}
+        x: 112
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -1, y: 28}
-        - {x: -1, y: 20}
-        - {x: -9, y: 20}
-        - {x: -9, y: -17}
-        - {x: 9, y: -17}
-        - {x: 9, y: 20}
-        - {x: 3, y: 20}
-        - {x: 3, y: 28}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 326418821135542429d966fb8feb1658
-      internalID: -4120828776421863668
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cage with rope_8
-      rect:
-        serializedVersion: 2
-        x: 232
-        y: 46
-        width: 18
-        height: 51
-      alignment: 9
-      pivot: {x: 0.5, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -4, y: 25.5}
-        - {x: -4, y: 22.5}
-        - {x: -9, y: 22.5}
-        - {x: -9, y: -14.5}
-        - {x: 9, y: -14.5}
-        - {x: 9, y: 22.5}
-        - {x: 1, y: 22.5}
-        - {x: 1, y: 25.5}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0c1b25e94277423448f27c59d06b6bc2
-      internalID: 6449004048780824732
+      spriteID: f79ecd471117ea347a022d528b094058
+      internalID: 7647712402258024371
       vertices: []
       indices: 
       edges: []
@@ -407,7 +311,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: b2ffde63b22eee746bd69b7be5fc9d60
+    spriteID: b7ad8094ff4ba144abd2e93768945236
     internalID: 0
     vertices: []
     indices: 

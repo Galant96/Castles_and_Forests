@@ -2,9 +2,15 @@
 
 public class Enemy : BaseCharacter
 {
+	// Score value for an enemy
+	[SerializeField]
+	private int value = 100;
 
 	private BoxCollider2D wallCollider;
 	private bool isAlive = true;
+
+	[SerializeField, Header("Register to know if enemy is died, and grant score to the player.")]
+	OnScoreEvent onScore;
 
 	// Start is called before the first frame update
 	protected override void Start()
@@ -37,7 +43,12 @@ public class Enemy : BaseCharacter
 
 		isAlive = false;
 		MyRigidbody2D.velocity = Vector2.zero;
+
 		Animator.SetTrigger("Dying");
+		
+		// Grant score for the player
+		onScore.Invoke(value);
+
 		Destroy(gameObject, 0.5f);
 	}
 		

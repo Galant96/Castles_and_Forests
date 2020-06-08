@@ -2,16 +2,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 { 
 	public static GameManager Instance { get; private set; }
 
-	[SerializeField]
-	private int playerLives = 3;
+
 
 	[SerializeField]
 	private LevelLoader levelLoader;
+
+	// UI
+	[SerializeField]
+	private TextMeshProUGUI scoreText;
+
+	[SerializeField]
+	private TextMeshProUGUI playerLivesText;
+
+	[SerializeField]
+	private TextMeshProUGUI timeText;
+
+	[SerializeField]
+	private int playerLives = 3;
+
+	public int PlayerLives { get { return playerLives; } set { playerLives = value; } }
+
+	public float Time { get; private set; } = 0f;
+
+	public int Score { get; set; } = 0;
 
 	private void Awake()
 	{
@@ -48,12 +67,18 @@ public class GameManager : MonoBehaviour
 		{
 			levelLoader = FindObjectOfType<LevelLoader>();
 		}
+
+		// Manage UI
+		DisplayLife();
+		DisplayScore();
+		DisplayTime();
+
 	}
 
 	public void ProcessPlayerDeath()
 	{
 		
-		if (playerLives > 1)
+		if (PlayerLives > 1)
 		{
 			
 			TakeLife();
@@ -67,7 +92,7 @@ public class GameManager : MonoBehaviour
 
 	IEnumerator PrepareToLoadingSceneAgain()
 	{
-		playerLives -= 1;
+		PlayerLives -= 1;
 		yield return new WaitForSeconds(2);
 		// Restart the level 
 		levelLoader.LoadTheSameSceneAgain();
@@ -78,6 +103,49 @@ public class GameManager : MonoBehaviour
 		StartCoroutine(PrepareToLoadingSceneAgain());	
 	}
 
+	private void DisplayLife()
+	{
+		if (playerLivesText.text != null)
+		{
+			playerLivesText.text = PlayerLives.ToString();
+		}
+	}
+
+	private void DisplayScore()
+	{
+		if (scoreText != null)
+		{
+			scoreText.text = Score.ToString();
+		}
+	}
+
+	private void DisplayTime()
+	{
+		if (timeText != null)
+		{
+			// Get time from the system
+			Time += UnityEngine.Time.deltaTime;
+
+			int minutesInt = (int)(Time / 60);
+			string minutes = (minutesInt.ToString());
+
+			if (minutesInt < 10)
+			{
+				minutes = "0" + minutes;
+			}
+
+			int secondsInt = (int)(Mathf.Round(Time % 60));
+			string seconds = secondsInt.ToString();
+
+			if (secondsInt < 10)
+			{
+				seconds = "0" + seconds;
+			}
+
+			timeText.text = minutes + ":" + seconds; 
+		}
+	}
+
 	private void ResetGameSession()
 	{
 		// Back to the main menu
@@ -85,4 +153,5 @@ public class GameManager : MonoBehaviour
 		// Destroy the current Game Manager
 		Destroy(gameObject);
 	}
+
 }

@@ -20,24 +20,12 @@ public class PlayerCharacter : BaseCharacter
 	private bool isAlive = true;
 
 	// Events
-	//Register to know when player is died"
-	private OnPlayerHit onPlayerHit = null;
-
-	private void Awake()
-	{
-		GameManager gameManager = FindObjectOfType<GameManager>();
-		onPlayerHit = new OnPlayerHit();
-		onPlayerHit.AddListener(() => gameManager.ProcessPlayerDeath());
-	}
 
 	// Start is called before the first frame update
 	protected override void Start()
     {
 		base.Start();
-		if (joystick == null)
-		{
-			joystick = FindObjectOfType<Joystick>();
-		}
+		
 		myFeetBoxCollider = GetComponent<BoxCollider2D>();
 		weapon = GetComponentInChildren<CircleCollider2D>();
 	}
@@ -45,6 +33,11 @@ public class PlayerCharacter : BaseCharacter
     // Update is called once per frame
     private void FixedUpdate()
     {
+		if (joystick == null)
+		{
+			Debug.Log("Is Found!");
+			joystick = GameManager.Instance.GetComponentInChildren<Joystick>();
+		}
 		// If player is not alive return
 		if (isAlive == false)
 		{
@@ -100,11 +93,8 @@ public class PlayerCharacter : BaseCharacter
 			Animator.SetBool("Dying", true);
 			MyBodyCollider2D.enabled = false;
 
-			if (onPlayerHit != null)
-			{
-				// Invoke the event of the player's death from the game manager
-				onPlayerHit.Invoke();
-			}	
+			// Process player death from by calling a method from the game manager instance
+			GameManager.Instance.ProcessPlayerDeath();
 		}
 	}
 
@@ -184,6 +174,20 @@ public class PlayerCharacter : BaseCharacter
 	{
 		Animator.enabled = false;
 	}
+
+	// Restore player's life on the potion collision
+	public void OnRestoreLife(int restoredLifes)
+	{
+		GameManager.Instance.PlayerLives += restoredLifes;
+	}
+
+	// Receive score
+	public void OnGrandScore(int score)
+	{
+		GameManager.Instance.Score += score;
+	}
+
+
 }
 
 
