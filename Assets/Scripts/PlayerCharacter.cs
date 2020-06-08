@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 //using UnityStandardAssets.CrossPlatformInput; // Get cross platform input
 
 public class PlayerCharacter : BaseCharacter
@@ -185,6 +186,21 @@ public class PlayerCharacter : BaseCharacter
 	public void OnGrandScore(int score)
 	{
 		GameManager.Instance.Score += score;
+	}
+
+	public void OnJumpPotion(int newJumpSpeed)
+	{
+		// Potion effect duration time
+		float effectDurationTime = 3f;
+		StartCoroutine(JumpPotionEffect(newJumpSpeed, effectDurationTime));
+	}
+
+	IEnumerator JumpPotionEffect(int newJumpSpeed, float effectDurationTime)
+	{
+		float originalJumpSpeed = jumpSpeed;
+		jumpSpeed = newJumpSpeed; 
+		yield return new WaitForSeconds(effectDurationTime);
+		jumpSpeed = originalJumpSpeed;
 	}
 
 

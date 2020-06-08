@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - Collectibles
   layers:
   - Default
   - TransparentFX
@@ -20,8 +21,8 @@ TagManager:
   - Background
   - Enemy
   - Hazards
-  - 
-  - 
+  - Collectibles
+  - Decorations
   - 
   - 
   - 
@@ -44,6 +45,9 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 668474471
+    locked: 0
+  - name: Decorations
+    uniqueID: 1341951575
     locked: 0
   - name: Climbing
     uniqueID: 700475081

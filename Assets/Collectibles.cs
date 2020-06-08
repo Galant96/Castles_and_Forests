@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Collectibles : MonoBehaviour
+public class Collectibles : MonoBehaviour
 {
 	[SerializeField]
 	protected int value = 1;
