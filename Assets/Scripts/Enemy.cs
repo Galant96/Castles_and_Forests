@@ -10,7 +10,7 @@ public class Enemy : BaseCharacter
 	private bool isAlive = true;
 
 	[SerializeField, Header("Register to know if enemy is died, and grant score to the player.")]
-	OnScoreEvent onScore;
+	OnScoreEvent onScore = null;
 
 	// Start is called before the first frame update
 	protected override void Start()
@@ -45,10 +45,13 @@ public class Enemy : BaseCharacter
 		MyRigidbody2D.velocity = Vector2.zero;
 
 		Animator.SetTrigger("Dying");
-		
-		// Grant score for the player
-		onScore.Invoke(value);
 
+		if (onScore != null)
+		{
+			// Grant score for the player
+			onScore.Invoke(value);
+		}
+		
 		Destroy(gameObject, 0.5f);
 	}
 		
