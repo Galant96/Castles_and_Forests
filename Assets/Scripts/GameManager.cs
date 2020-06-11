@@ -8,20 +8,18 @@ public class GameManager : MonoBehaviour
 { 
 	public static GameManager Instance { get; private set; }
 
-
-
 	[SerializeField]
 	private LevelLoader levelLoader;
 
 	// UI
 	[SerializeField]
-	private TextMeshProUGUI scoreText;
+	private TextMeshProUGUI scoreText = null;
 
 	[SerializeField]
-	private TextMeshProUGUI playerLivesText;
+	private TextMeshProUGUI playerLivesText = null;
 
 	[SerializeField]
-	private TextMeshProUGUI timeText;
+	private TextMeshProUGUI timeText = null;
 
 	[SerializeField]
 	private int playerLives = 3;
@@ -53,13 +51,6 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
-
-	// Start is called before the first frame update
-	void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -77,7 +68,6 @@ public class GameManager : MonoBehaviour
 
 	public void ProcessPlayerDeath()
 	{
-		
 		if (PlayerLives > 1)
 		{
 			
@@ -87,7 +77,6 @@ public class GameManager : MonoBehaviour
 		{
 			ResetGameSession();
 		}
-
 	}
 
 	IEnumerator PrepareToLoadingSceneAgain()

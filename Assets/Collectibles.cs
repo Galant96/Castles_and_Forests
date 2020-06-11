@@ -1,14 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class Collectibles : MonoBehaviour
 {
 	[SerializeField]
-	protected int value = 1;
+	private int value = 1;
 
 	[SerializeField]
-	protected string tagType = "Player";
+	private string tagType = "Player";
+
+	[SerializeField]
+	private string soundName = "change";
 
 	[SerializeField, Header("Register to know when a collectible item is hit.")]
 	protected OnCollectibleHitEvent onCollectibleHit;
@@ -17,9 +19,13 @@ public class Collectibles : MonoBehaviour
 	{
 		if (playerCollider.tag == tagType)
 		{
+			if (soundName != "change")
+			{
+				SoundManager.Instance.PlaySoundByName(soundName);
+			}
+
 			onCollectibleHit.Invoke(value);
 			Destroy(gameObject);
 		}
 	}
-
 }
