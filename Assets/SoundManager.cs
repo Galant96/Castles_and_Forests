@@ -20,6 +20,7 @@ public class SoundManager : MonoBehaviour
 
 			sound.AudioSource.volume = sound.Volume;
 			sound.AudioSource.pitch = sound.Pitch;
+			sound.AudioSource.loop = sound.Loop;
 		}
 	}
 	/// <summary>
@@ -49,7 +50,7 @@ public class SoundManager : MonoBehaviour
 		{
 			// Get the sound to play
 			Sound sound = sounds.Find(sounds => sounds.SoundName == name);
-			AudioSource.PlayClipAtPoint(sound.Clip, Camera.main.transform.position);
+			sound.AudioSource.Play();
 		}
 	}
 

@@ -30,12 +30,20 @@ public class Sound
 		set { volume = value; }
 	}
 
-	[SerializeField, Range(0f, 1.5f)]
-	private float pitch = 0.7f;
+	[SerializeField, Range(0f, 3f)]
+	private float pitch = 1f;
 	public float Pitch
 	{
 		get { return pitch; }
 		set { pitch = value; }
+	}
+
+	[SerializeField]
+	private bool loop = false;
+	public bool Loop
+	{
+		get { return loop; }
+		set { loop = value; }
 	}
 
 	[HideInInspector]

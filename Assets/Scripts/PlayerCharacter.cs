@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 //using UnityStandardAssets.CrossPlatformInput; // Get cross platform input
 
 public class PlayerCharacter : BaseCharacter
@@ -18,6 +19,8 @@ public class PlayerCharacter : BaseCharacter
 	private BoxCollider2D myFeetBoxCollider = null;
 	private CircleCollider2D weapon = null;
 
+	private CharacterSoundKeeper soundKeeper = null;
+
 	private bool isAlive = true;
 
 	// Events
@@ -26,13 +29,13 @@ public class PlayerCharacter : BaseCharacter
 	protected override void Start()
     {
 		base.Start();
-		
+		soundKeeper = GetComponent<CharacterSoundKeeper>();
 		myFeetBoxCollider = GetComponent<BoxCollider2D>();
 		weapon = GetComponentInChildren<CircleCollider2D>();
 	}
 
-    // Update is called once per frame
-    private void FixedUpdate()
+	// Update is called once per frame
+	private void FixedUpdate()
     {
 		if (joystick == null)
 		{
@@ -92,7 +95,10 @@ public class PlayerCharacter : BaseCharacter
 
 			MyRigidbody2D.velocity = deathKick;
 			Animator.SetBool("Dying", true);
+			// Prevent moving after the player is died
 			MyBodyCollider2D.enabled = false;
+			myFeetBoxCollider.enabled = false;
+
 
 			// Process player death from by calling a method from the game manager instance
 			GameManager.Instance.ProcessPlayerDeath();

@@ -591,6 +591,37 @@ Transform:
   m_Father: {fileID: 1274676297}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &264468803
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 264468804}
+  m_Layer: 0
+  m_Name: Jump Potions
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &264468804
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264468803}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1887101383}
+  m_Father: {fileID: 1513123205}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &278926855
 GameObject:
   m_ObjectHideFlags: 0
@@ -24937,7 +24968,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.006872654, y: 0.0005865097}
+  m_Offset: {x: -0.0035372674, y: -0.10114241}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -24948,7 +24979,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5099592, y: 0.6829529}
+  m_Size: {x: 0.39655632, y: 0.29938412}
   m_EdgeRadius: 0
 --- !u!114 &613367772
 MonoBehaviour:
@@ -24964,7 +24995,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 1
   tagType: Player
-  soundName: Potion Use 1
+  soundName: Potion1
   onCollectibleHit:
     m_PersistentCalls:
       m_Calls:
@@ -25023,7 +25054,7 @@ Animator:
   m_GameObject: {fileID: 635587943}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9435f8719fc610749933b94774a3a17c, type: 2}
+  m_Controller: {fileID: 9100000, guid: beff30646b2747d4590e17d328465120, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -35134,7 +35165,7 @@ Animator:
   m_GameObject: {fileID: 769957675}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ef321717fa0158c46b848d3a396cbfb0, type: 2}
+  m_Controller: {fileID: 9100000, guid: fee4320a9c1c0304284c95a184e75702, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -42475,8 +42506,8 @@ Transform:
   - {fileID: 1305392121}
   - {fileID: 1574418158}
   - {fileID: 846143146}
-  - {fileID: 1887101383}
   - {fileID: 1922145011}
+  - {fileID: 264468804}
   m_Father: {fileID: 548682729}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -43488,7 +43519,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 30
   tagType: Player
-  soundName: change
+  soundName: Potion2
   onCollectibleHit:
     m_PersistentCalls:
       m_Calls:
@@ -43513,11 +43544,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1887101378}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.75, y: -8.34, z: 0}
+  m_LocalPosition: {x: 5.55, y: 15.33, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1513123205}
-  m_RootOrder: 10
+  m_Father: {fileID: 264468804}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1891337823
 GameObject:
@@ -43861,7 +43892,7 @@ Transform:
   m_Children:
   - {fileID: 613367770}
   m_Father: {fileID: 1513123205}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1959401324
 GameObject:
@@ -44839,36 +44870,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 5845743644274396945, guid: e431ff1df0cae3c4f8e68380dc292e24,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 1832005967, guid: e431ff1df0cae3c4f8e68380dc292e24, type: 3}
-      propertyPath: onPlayerHit.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1832005967, guid: e431ff1df0cae3c4f8e68380dc292e24, type: 3}
       propertyPath: joystick
       value: 
       objectReference: {fileID: 425100827}
-    - target: {fileID: 1832005967, guid: e431ff1df0cae3c4f8e68380dc292e24, type: 3}
-      propertyPath: onPlayerHit.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1832005967, guid: e431ff1df0cae3c4f8e68380dc292e24, type: 3}
-      propertyPath: onPlayerHit.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1832005967, guid: e431ff1df0cae3c4f8e68380dc292e24, type: 3}
-      propertyPath: jumpingSprite
-      value: 
-      objectReference: {fileID: 1192432631767228310, guid: 4e4a691209b9a48468391c5abbaa5d66,
-        type: 3}
-    - target: {fileID: 1832005967, guid: e431ff1df0cae3c4f8e68380dc292e24, type: 3}
-      propertyPath: jumpSpeed
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 5845743644274396958, guid: e431ff1df0cae3c4f8e68380dc292e24,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -44924,11 +44929,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5845743644274396959, guid: e431ff1df0cae3c4f8e68380dc292e24,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e431ff1df0cae3c4f8e68380dc292e24, type: 3}
 --- !u!1001 &6511613817592121427

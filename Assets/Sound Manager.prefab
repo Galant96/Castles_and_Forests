@@ -44,7 +44,78 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - soundName: Potion Use 1
+  - soundName: Potion1
     clip: {fileID: 8300000, guid: 9036f0fb0e2e70544ac8b718e1931b30, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - soundName: Potion2
+    clip: {fileID: 8300000, guid: 964ccb4fb3963ab48ae48ad82193f3d3, type: 3}
     volume: 0.474
-    pitch: 0.7
+    pitch: 1
+    loop: 0
+  - soundName: Potion3
+    clip: {fileID: 8300000, guid: c69f2da454a15a0449b6b11756fce883, type: 3}
+    volume: 0.474
+    pitch: 1
+    loop: 0
+  - soundName: Potion4
+    clip: {fileID: 8300000, guid: 103767f16fb224d488981babe6157081, type: 3}
+    volume: 0.474
+    pitch: 1
+    loop: 0
+  - soundName: Potion5
+    clip: {fileID: 8300000, guid: 61c7a9fea3c933346aff6af0f9e3c9ab, type: 3}
+    volume: 0.474
+    pitch: 1
+    loop: 0
+  - soundName: Potion6
+    clip: {fileID: 8300000, guid: d091dad7544fdd848854a0804f7faf12, type: 3}
+    volume: 0.474
+    pitch: 1
+    loop: 0
+  - soundName: PlayerStep1
+    clip: {fileID: 8300000, guid: f2e946a2d42464c42bd8280ab9c0b376, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+  - soundName: PlayerStep2
+    clip: {fileID: 8300000, guid: c8e48d558797a5846b21be969cefb338, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+  - soundName: PlayerStep3
+    clip: {fileID: 8300000, guid: a29f665481963c544895ac05b3d2cb76, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+  - soundName: PlayerAttack1
+    clip: {fileID: 8300000, guid: 6c2620e3b2e4a5b44adb0831f30db707, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+  - soundName: PlayerAttack2
+    clip: {fileID: 8300000, guid: ad8f0424954c18447b88a54829367844, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+  - soundName: PlayerAttack3
+    clip: {fileID: 8300000, guid: 9d551e17d69b9e14eac803ebd0e841c4, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+  - soundName: PlayerAttack4
+    clip: {fileID: 8300000, guid: bd0a73c8bb27d1c4a912120b4dbba39e, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+  - soundName: PlayerAttack5
+    clip: {fileID: 8300000, guid: f38bd6132a9e9ea4f95b9b5c448ab034, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+  - soundName: change
+    clip: {fileID: 8300000, guid: 9d551e17d69b9e14eac803ebd0e841c4, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
