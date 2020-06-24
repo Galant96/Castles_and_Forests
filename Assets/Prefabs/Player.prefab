@@ -45,9 +45,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.0244023, y: -0.4228077}
+  m_Offset: {x: 1.2, y: -0.4}
   serializedVersion: 2
-  m_Radius: 0.18855846
+  m_Radius: 0.2
 --- !u!114 &1794900388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,7 +113,7 @@ MonoBehaviour:
   speed: 10
   jumpSpeed: 20
   climbSpeed: 10
-  deathKick: {x: 10, y: 10}
+  deathKick: {x: 50, y: 25}
   joystick: {fileID: 0}
 --- !u!114 &5039233164025696760
 MonoBehaviour:
@@ -127,14 +127,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6de8c185205fd19448dbd463dd37befe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSound: PlayerStep1
+  stepSounds: []
   attackSounds:
   - PlayerAttack1
   - PlayerAttack2
   - PlayerAttack3
-  - PlayerAttack4
-  - PlayerAttack5
-  jumpSound: change
+  jumpSound: Jump1
+  landSound: Land1
   climbSound: change
   dieSound: change
 --- !u!212 &5845743644274396959

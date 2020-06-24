@@ -22,6 +22,11 @@ public class PlayerCharacter : BaseCharacter
 	private CharacterSoundKeeper soundKeeper = null;
 
 	private bool isAlive = true;
+	public bool IsAlive
+	{
+		get { return isAlive; }
+		private set { isAlive = value; }
+	}
 
 	// Events
 
@@ -30,6 +35,7 @@ public class PlayerCharacter : BaseCharacter
     {
 		base.Start();
 		soundKeeper = GetComponent<CharacterSoundKeeper>();
+
 		myFeetBoxCollider = GetComponent<BoxCollider2D>();
 		weapon = GetComponentInChildren<CircleCollider2D>();
 	}
@@ -74,31 +80,32 @@ public class PlayerCharacter : BaseCharacter
 	}
 
 	// Enable or disable weapon via animation events
-	public void EnableWeapon()
+	public void EnableWeapon(int isEnabledIntValue)
 	{
+		bool isEnabled = Convert.ToBoolean(isEnabledIntValue);
 		// Enable weapon's collider while attacking
-		weapon.enabled = true;
+		weapon.enabled = isEnabled;
 	}
-
-	public void DisableWeapon()
-	{
-		// Disable weapon's collider while attacking
-		weapon.enabled = false;
-	}
-
 
 	public override void Die()
 	{
-		if (MyBodyCollider2D.IsTouchingLayers(LayerMask.GetMask("Enemy", "Hazards")))
+		bool isPlayerTrapped = MyBodyCollider2D.IsTouchingLayers(LayerMask.GetMask("Enemy", "Hazards", "Water"));
+		if (isPlayerTrapped)
 		{
 			isAlive = false;
 
-			MyRigidbody2D.velocity = deathKick;
-			Animator.SetBool("Dying", true);
-			// Prevent moving after the player is died
-			MyBodyCollider2D.enabled = false;
-			myFeetBoxCollider.enabled = false;
+			if (MyBodyCollider2D.IsTouchingLayers(LayerMask.GetMask("Water")))
+			{
+				soundKeeper.PlayCharacterSound("Splash"); // Play if the player fall into the water.
+				MyRigidbody2D.velocity = Vector2.zero;
+			}
+			else
+			{
+				soundKeeper.PlayCharacterSound(soundKeeper.DieSound);
+				MyRigidbody2D.velocity = deathKick;
+			}
 
+			Animator.SetBool("Dying", true);
 
 			// Process player death from by calling a method from the game manager instance
 			GameManager.Instance.ProcessPlayerDeath();
@@ -107,6 +114,7 @@ public class PlayerCharacter : BaseCharacter
 
 	public override void Move()
 	{
+
 		float controlThrow = joystick.Horizontal; // Value is between -1 to +1
 
 		Vector2 playerVelocity = new Vector2(controlThrow * Speed, MyRigidbody2D.velocity.y);
@@ -115,6 +123,7 @@ public class PlayerCharacter : BaseCharacter
 		// Set true if character is moving
 		bool isHorizontalSpeed = Mathf.Abs(MyRigidbody2D.velocity.x) > Mathf.Epsilon;
 		Animator.SetBool("Running", isHorizontalSpeed);
+
 	}
 
 	private void Climb()
@@ -146,24 +155,22 @@ public class PlayerCharacter : BaseCharacter
 
 			if (playerHasVerticalSpeed)
 			{
+
 				Animator.SetBool("Jumping", true);
 				Animator.SetBool("Falling", false);
 				Animator.SetBool("Running", false);
-
 			}
 			else
 			{
 				Animator.SetBool("Jumping", false);
 				Animator.SetBool("Falling", true);
 				Animator.SetBool("Running", false);
-
 			}
 
 			return;
 		}
 		else
 		{
-			Animator.enabled = true;
 			Animator.SetBool("Jumping", false);
 			Animator.SetBool("Falling", false);
 		}

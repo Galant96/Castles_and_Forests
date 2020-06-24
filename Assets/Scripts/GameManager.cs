@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
 using TMPro;
 
@@ -56,7 +54,7 @@ public class GameManager : MonoBehaviour
     {
 		if (levelLoader == null)
 		{
-			levelLoader = FindObjectOfType<LevelLoader>();
+			levelLoader = GetComponentInChildren<LevelLoader>();
 		}
 
 		// Manage UI
@@ -70,7 +68,6 @@ public class GameManager : MonoBehaviour
 	{
 		if (PlayerLives > 1)
 		{
-			
 			TakeLife();
 		}
 		else
@@ -83,6 +80,9 @@ public class GameManager : MonoBehaviour
 	{
 		PlayerLives -= 1;
 		yield return new WaitForSeconds(2);
+		// Pause all sounds
+		SoundManager.Instance.PauseAllSounds();
+
 		// Restart the level 
 		levelLoader.LoadTheSameSceneAgain();
 	}
@@ -142,5 +142,6 @@ public class GameManager : MonoBehaviour
 		// Destroy the current Game Manager
 		Destroy(gameObject);
 	}
+
 
 }
