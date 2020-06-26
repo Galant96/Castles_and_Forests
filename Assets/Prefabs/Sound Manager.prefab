@@ -158,14 +158,49 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 0d45bb6a3c36ad1418f23ce2dab15f17, type: 3}
     volume: 0.414
     pitch: 1
-    loop: 0
+    loop: 1
+  - soundName: Creak
+    clip: {fileID: 8300000, guid: 3846e0f632e05f346b36d2d6858d6bc9, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 1
   - soundName: Splash
     clip: {fileID: 8300000, guid: 78326e4ab9833ec46900854a9887f16d, type: 3}
     volume: 0.414
     pitch: 1
     loop: 0
-  - soundName: Splash
-    clip: {fileID: 8300000, guid: 78326e4ab9833ec46900854a9887f16d, type: 3}
+  - soundName: Stab
+    clip: {fileID: 8300000, guid: 72641f99219c1f0408c6426bd47b41f5, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Swing Blood 1
+    clip: {fileID: 8300000, guid: 91879fa048281594ab43e38d8cb38380, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Swing Blood 2
+    clip: {fileID: 8300000, guid: 15deb7d2c41f11648ac19a399f2a30e4, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Swing Blood 3
+    clip: {fileID: 8300000, guid: f0380a0c5aadea248ae0c5722438e518, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Swing Blood 4
+    clip: {fileID: 8300000, guid: d075e1050bfd18848b1a441a9329b947, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Swing Blood 5
+    clip: {fileID: 8300000, guid: 2b29564301d334343847ff71a85b3c17, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Swing Blood 6
+    clip: {fileID: 8300000, guid: 8c1aaf4ab42aec74faf7b42cfa85a3ca, type: 3}
     volume: 0.414
     pitch: 1
     loop: 0
