@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Thrower : MonoBehaviour
 {
@@ -24,8 +25,8 @@ public class Thrower : MonoBehaviour
 
 	private List<GameObject> trajectoryPoints = null;
 
-	private bool isObjectThrown = false;
 	private bool isPressed = false;
+
 
 	private void Start()
 	{
@@ -41,35 +42,40 @@ public class Thrower : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-		if (isObjectThrown)
-		{
-			return;
-		}
 
-		if(Input.GetMouseButtonDown(0))
+		if (Input.touchCount > 0)
 		{
-			isPressed = true;
+			Touch touch = Input.GetTouch(0);
 
-			if (!objectModel)
+			switch(touch.phase)
 			{
-				CreateObject();
+				case TouchPhase.Began:
+					break;
+				case TouchPhase.Moved:
+					isPressed = true;
+
+					if (!objectModel)
+					{
+						CreateObject();
+					}
+					break;
+				case TouchPhase.Ended:
+					isPressed = false;
+
+					if (objectModel != null)
+					{
+						ThrowObject();
+					}
+					break;
 			}
 		}
 
-		if (Input.GetMouseButtonUp(0))
-		{
-			isPressed = false;
 
-			if (!isObjectThrown)
-			{
-				ThrowObject();
-			}
-		}
 
-		if (isPressed)
+		if (isPressed && objectModel != null)
 		{
 			Vector3 force = GetForce(objectModel.transform.position, Camera.main.ScreenToWorldPoint(Input.mousePosition));
-			float angle = Mathf.Atan2(force.y, force.x) * Mathf.Rad2Deg;
+			float angle = Mathf.Atan2(force.y, force.x) * Mathf.Rad2Deg; // TO DO IMPLEMENT LOOK UP TABLE
 			throwPoint.eulerAngles = new Vector3(0, 0, angle);
 			setTrajectoryPoints(throwPoint.position, force / objectModel.GetComponent<Rigidbody2D>().mass);
 		}
@@ -109,12 +115,13 @@ public class Thrower : MonoBehaviour
 	{
 		objectModel.SetActive(true);
 		objectModel.GetComponent<Rigidbody2D>().AddForce(GetForce(objectModel.transform.position,
-			Camera.main.ScreenToWorldPoint(Input.mousePosition)), ForceMode2D.Impulse);
-
-		isObjectThrown = true;
+		Camera.main.ScreenToWorldPoint(Input.mousePosition)), ForceMode2D.Impulse);
 
 		// TO DO - FIX THAT
 		Destroy(objectModel, 3f);
+
+		// Reset the thrower
+		objectModel = null;
 	}
 
 	private Vector2 GetForce(Vector3 fromPos, Vector3 toPos)

@@ -35919,6 +35919,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bombPrefab: {fileID: 2022887813776465586, guid: 8295e8a73e2a7a746a4589fe058ce7d1,
     type: 3}
+  objectModel: {fileID: 0}
   trajectoryPointPrefab: {fileID: 7768058363561566548, guid: 3edc340951afc344b85121c959c738fe,
     type: 3}
   throwPoint: {fileID: 679516867}
@@ -48711,7 +48712,7 @@ PrefabInstance:
     - target: {fileID: 7534153200838987374, guid: c8eab47b017c01843b6b450a4879c861,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.9499999
+      value: 0.94999987
       objectReference: {fileID: 0}
     - target: {fileID: 7534153200838987374, guid: c8eab47b017c01843b6b450a4879c861,
         type: 3}
@@ -48731,7 +48732,7 @@ PrefabInstance:
     - target: {fileID: 7534153200931146634, guid: c8eab47b017c01843b6b450a4879c861,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.9499999
+      value: 0.94999987
       objectReference: {fileID: 0}
     - target: {fileID: 7534153200931146634, guid: c8eab47b017c01843b6b450a4879c861,
         type: 3}
@@ -48751,7 +48752,7 @@ PrefabInstance:
     - target: {fileID: 7534153200494123742, guid: c8eab47b017c01843b6b450a4879c861,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.9499999
+      value: 0.9499998
       objectReference: {fileID: 0}
     - target: {fileID: 7534153200494123742, guid: c8eab47b017c01843b6b450a4879c861,
         type: 3}
