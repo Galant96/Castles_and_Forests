@@ -15,6 +15,9 @@ public class PlayerCharacter : BaseCharacter
 	[SerializeField]
 	Vector2 deathKick = new Vector2(25f, 25f);
 
+	private Vector2 playerVelocity;
+	public Vector2 PlayerVelocity { get => playerVelocity; set => playerVelocity = value; }
+
 	[SerializeField]
 	private Joystick joystick = null;
 
@@ -30,6 +33,7 @@ public class PlayerCharacter : BaseCharacter
 		get { return isAlive; }
 		private set { isAlive = value; }
 	}
+
 
 	// Events
 
@@ -126,7 +130,7 @@ public class PlayerCharacter : BaseCharacter
 
 		float controlThrow = joystick.Horizontal; // Value is between -1 to +1
 
-		Vector2 playerVelocity = new Vector2(controlThrow * Speed, MyRigidbody2D.velocity.y);
+		playerVelocity = new Vector2(controlThrow * Speed, MyRigidbody2D.velocity.y);
 		MyRigidbody2D.velocity = playerVelocity;
 
 		// Set true if character is moving

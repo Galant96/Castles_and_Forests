@@ -21,7 +21,7 @@ public class Thrower : MonoBehaviour
 	private int numberOfTrajectoryPoints = 30;
 
 	[SerializeField]
-	private float throwPower = 25f;
+	private Vector2 throwPower = new Vector2(5f, 10f);
 
 	private List<GameObject> trajectoryPoints = null;
 
@@ -43,7 +43,7 @@ public class Thrower : MonoBehaviour
 	private void FixedUpdate()
 	{
 
-		if (Input.touchCount > 0)
+		if (Input.touchCount > 0 && PlayerCharacter.Instance.PlayerVelocity.x == 0)
 		{
 			Touch touch = Input.GetTouch(0);
 
@@ -67,10 +67,11 @@ public class Thrower : MonoBehaviour
 						ThrowObject();
 					}
 					break;
+
+				default:
+					break;
 			}
 		}
-
-
 
 		if (isPressed && objectModel != null)
 		{
@@ -120,18 +121,22 @@ public class Thrower : MonoBehaviour
 		// TO DO - FIX THAT
 		Destroy(objectModel, 3f);
 
+		PlayerCharacter.Instance.GetComponent<Animator>().SetBool("Throwing", false);
+
 		// Reset the thrower
 		objectModel = null;
 	}
 
 	private Vector2 GetForce(Vector3 fromPos, Vector3 toPos)
 	{
-		return (new Vector2(toPos.x, toPos.y) - new Vector2(fromPos.x, fromPos.y) * throwPower);
+		return ((new Vector2(toPos.x, toPos.y) - new Vector2(fromPos.x, fromPos.y)) * throwPower);
 	}
 
 	private void CreateObject()
 	{
+
 		GameManager gameManager = GameManager.Instance;
+
 		// Check if there is any bombs in equpiment.
 		bool isBombThrown = (gameManager.NumberOfBombs <= 0);
 
@@ -142,6 +147,8 @@ public class Thrower : MonoBehaviour
 			objectModel = Instantiate(bombPrefab, throwPoint.position, Quaternion.identity) as GameObject;
 
 			objectModel.SetActive(false);
+
+			PlayerCharacter.Instance.GetComponent<Animator>().SetBool("Throwing", true);
 		}
 		else
 		{
@@ -149,4 +156,12 @@ public class Thrower : MonoBehaviour
 		}
 	}
 
+	private bool IsPointerOverUIObject()
+	{
+		PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
+		eventDataCurrentPosition.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+		List<RaycastResult> results = new List<RaycastResult>();
+		EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
+		return results.Count > 0;
+	}
 }

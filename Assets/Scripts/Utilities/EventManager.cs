@@ -9,3 +9,6 @@ public class OnCollectibleHitEvent : UnityEvent <int> { };
 
 [System.Serializable]
 public class OnScoreEvent : UnityEvent<int> { };
+
+[System.Serializable]
+public class OnThrowEvent : UnityEvent<Vector2> { };

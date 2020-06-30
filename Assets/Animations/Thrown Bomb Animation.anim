@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Attack Bomb Animation
+  m_Name: Thrown Bomb Animation
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -22,32 +22,32 @@ AnimationClip:
     - time: 0
       value: {fileID: 1692740302264557312, guid: 83ff5baf9dfb7cd4ab15bdc51ff9eeb2,
         type: 3}
-    - time: 0.1
+    - time: 0.07692308
       value: {fileID: 1552950895542703917, guid: 83ff5baf9dfb7cd4ab15bdc51ff9eeb2,
         type: 3}
-    - time: 0.2
+    - time: 0.15384616
       value: {fileID: 4643518627957305415, guid: 83ff5baf9dfb7cd4ab15bdc51ff9eeb2,
         type: 3}
-    - time: 0.3
+    - time: 0.23076923
       value: {fileID: -6290995991444117179, guid: 83ff5baf9dfb7cd4ab15bdc51ff9eeb2,
         type: 3}
-    - time: 0.4
+    - time: 0.30769232
       value: {fileID: -529555851660113659, guid: 83ff5baf9dfb7cd4ab15bdc51ff9eeb2,
         type: 3}
-    - time: 0.5
+    - time: 0.3846154
       value: {fileID: 867805270219545362, guid: 83ff5baf9dfb7cd4ab15bdc51ff9eeb2,
         type: 3}
-    - time: 0.6
+    - time: 0.46153846
       value: {fileID: -5445749699227082215, guid: 83ff5baf9dfb7cd4ab15bdc51ff9eeb2,
         type: 3}
-    - time: 0.7
+    - time: 0.53846157
       value: {fileID: 1129659726460690972, guid: 83ff5baf9dfb7cd4ab15bdc51ff9eeb2,
         type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 10
+  m_SampleRate: 13
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -75,7 +75,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.8
+    m_StopTime: 0.61538464
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

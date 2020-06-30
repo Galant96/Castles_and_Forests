@@ -101,11 +101,13 @@ GameObject:
   - component: {fileID: 5845743644274396958}
   - component: {fileID: 1832005967}
   - component: {fileID: 5039233164025696760}
+  - component: {fileID: 837467872}
   - component: {fileID: 5845743644274396959}
   - component: {fileID: 5845743644274396944}
   - component: {fileID: 1914659195}
   - component: {fileID: 1914659194}
   - component: {fileID: 338093524}
+  - component: {fileID: 837467867}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -146,9 +148,6 @@ MonoBehaviour:
   climbSpeed: 10
   deathKick: {x: 50, y: 25}
   joystick: {fileID: 0}
-  bombPrefab: {fileID: 2022887813776465586, guid: 8295e8a73e2a7a746a4589fe058ce7d1,
-    type: 3}
-  throwPoint: {fileID: 679516867}
 --- !u!114 &5039233164025696760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,6 +170,26 @@ MonoBehaviour:
   climbSound: change
   deathSound:
   - Stab
+--- !u!114 &837467872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5845743644274396945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 060b9a44b92ebe74b841b24a22576329, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bombPrefab: {fileID: 2022887813776465586, guid: 8295e8a73e2a7a746a4589fe058ce7d1,
+    type: 3}
+  objectModel: {fileID: 0}
+  trajectoryPointPrefab: {fileID: 7768058363561566548, guid: 3edc340951afc344b85121c959c738fe,
+    type: 3}
+  throwPoint: {fileID: 679516867}
+  numberOfTrajectoryPoints: 30
+  throwPower: {x: 2, y: 5}
 --- !u!212 &5845743644274396959
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -303,3 +322,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.43123198, y: 0.08096266}
   m_EdgeRadius: 0
+--- !u!114 &837467867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5845743644274396945}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1c6daced3d14e04998e9a6824c9eb41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bombPrefab: {fileID: 2022887813776465586, guid: 8295e8a73e2a7a746a4589fe058ce7d1,
+    type: 3}
+  throwerPoint: {fileID: 679516867}
