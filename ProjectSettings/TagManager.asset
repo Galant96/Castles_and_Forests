@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Collectibles
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -61,12 +62,15 @@ TagManager:
   - name: Hazards
     uniqueID: 3051938509
     locked: 0
+  - name: Collectibles
+    uniqueID: 3972635717
+    locked: 0
+  - name: Moveable
+    uniqueID: 4244598371
+    locked: 0
   - name: Player
     uniqueID: 3412809001
     locked: 0
   - name: Foreground
     uniqueID: 1486502617
-    locked: 0
-  - name: Collectibles
-    uniqueID: 3972635717
     locked: 0

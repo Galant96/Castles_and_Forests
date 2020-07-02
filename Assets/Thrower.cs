@@ -98,17 +98,26 @@ public class Thrower : MonoBehaviour
 
 		time += 0.1f;
 
+		bool setTrajectoryActive = true;
+
 		for (int i = 0; i < numberOfTrajectoryPoints; i++)
 		{
+
 			float dx = velocity * time * Mathf.Cos(angle * Mathf.Deg2Rad);
-			float dy = velocity * time * Mathf.Sin(angle * Mathf.Deg2Rad) 
+			float dy = velocity * time * Mathf.Sin(angle * Mathf.Deg2Rad)
 				- ((Physics2D.gravity.magnitude * time * time) * 0.5f);
 
 			Vector3 pos = new Vector3(pointStartPosition.x + dx, pointStartPosition.y + dy, 2);
 			trajectoryPoints[i].transform.position = pos;
-			trajectoryPoints[i].SetActive(true);
+			trajectoryPoints[i].SetActive(setTrajectoryActive);
 			trajectoryPoints[i].transform.eulerAngles = new Vector3(0, 0, Mathf.Atan2(pointVelocity.y - (Physics.gravity.magnitude) * time, pointVelocity.x) * Mathf.Rad2Deg);
-			time += 0.1f;
+			time += 0.03f;
+
+			if (trajectoryPoints[i].GetComponent<CircleCollider2D>().IsTouchingLayers(LayerMask.GetMask("Ground")))
+			{
+				setTrajectoryActive = false;
+			}
+
 		}
 	}
 
@@ -117,9 +126,6 @@ public class Thrower : MonoBehaviour
 		objectModel.SetActive(true);
 		objectModel.GetComponent<Rigidbody2D>().AddForce(GetForce(objectModel.transform.position,
 		Camera.main.ScreenToWorldPoint(Input.mousePosition)), ForceMode2D.Impulse);
-
-		// TO DO - FIX THAT
-		Destroy(objectModel, 3f);
 
 		PlayerCharacter.Instance.GetComponent<Animator>().SetBool("Throwing", false);
 
