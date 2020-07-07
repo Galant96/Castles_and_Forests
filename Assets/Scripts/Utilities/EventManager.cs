@@ -13,3 +13,5 @@ public class OnScoreEvent : UnityEvent<int> { };
 [System.Serializable]
 public class OnThrowEvent : UnityEvent<Vector2> { };
 
+[System.Serializable]
+public class OnMechanismEvent : UnityEvent<bool> { };

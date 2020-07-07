@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: -6867109307642987013}
   - component: {fileID: 2022887813776465590}
   - component: {fileID: 2022887813776465584}
-  - component: {fileID: 7600611006006655596}
   - component: {fileID: 2022887813776465587}
   - component: {fileID: 71459605}
+  - component: {fileID: 6083543842433828599}
+  - component: {fileID: 2177264157112362305}
   m_Layer: 16
   m_Name: Attack Bomb
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50,11 +51,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detonationTime: 3
-  explosionCollider: {fileID: 7600611006006655596}
+  explosionLeftCollider: {fileID: 2177264157112362305}
+  explosionRightCollider: {fileID: 6083543842433828599}
   bombAnimator: {fileID: 71459605}
   explosionSoundName: Explosion
   fuseSoundName: Fuse
   sparkles: {fileID: 4392204843955973179}
+  explosionPowerX: 1000
+  explosionPowerY: 1000
 --- !u!212 &2022887813776465590
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -91,7 +95,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -882158295
-  m_SortingLayer: 9
+  m_SortingLayer: 10
   m_SortingOrder: 0
   m_Sprite: {fileID: 1692740302264557312, guid: 83ff5baf9dfb7cd4ab15bdc51ff9eeb2,
     type: 3}
@@ -121,32 +125,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.057080746}
   serializedVersion: 2
   m_Radius: 0.35
---- !u!61 &7600611006006655596
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2022887813776465586}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.75, y: 0.8}
-    newSize: {x: 0.46666667, y: 0.53333336}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3, y: 3}
-  m_EdgeRadius: 0
 --- !u!50 &2022887813776465587
 Rigidbody2D:
   serializedVersion: 4
@@ -159,13 +137,13 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1.5
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 6200000, guid: 1a4d0e27bcb51ff4ab4f023d43d94992, type: 2}
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!95 &71459605
@@ -187,6 +165,58 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &6083543842433828599
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2022887813776465586}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.6, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.75, y: 0.8}
+    newSize: {x: 0.46666667, y: 0.53333336}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.1999998, y: 2.5}
+  m_EdgeRadius: 0
+--- !u!61 &2177264157112362305
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2022887813776465586}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.6, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.75, y: 0.8}
+    newSize: {x: 0.46666667, y: 0.53333336}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.2, y: 2.5}
+  m_EdgeRadius: 0
 --- !u!1001 &4547852681017201803
 PrefabInstance:
   m_ObjectHideFlags: 0

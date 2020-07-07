@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6899793663158516642}
   - component: {fileID: 7555485112491737700}
   - component: {fileID: 487882340514816756}
-  m_Layer: 16
+  m_Layer: 10
   m_Name: Trajectory Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -1,31 +1,37 @@
 fileFormatVersion: 2
-guid: ed51bcf610e2ce64e8778c074ff64933
+guid: b2b9835d6f2003540ba9d6bd50ba8895
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8185400763691481508
-    second: DoorSmallAnim_0
+      213: 8096991151837698020
+    second: Hour Glass_0
   - first:
-      213: -5489131158520089517
-    second: DoorSmallAnim_1
+      213: 6536599152040949578
+    second: Hour Glass_1
   - first:
-      213: 3312785519126824136
-    second: DoorSmallAnim_2
+      213: -1494081070161981072
+    second: Hour Glass_2
   - first:
-      213: -3053971041117606955
-    second: DoorSmallAnim_3
+      213: -8702554349983349050
+    second: Hour Glass_3
   - first:
-      213: 7972807223341403960
-    second: DoorSmallAnim_4
+      213: 1328329428329317500
+    second: Hour Glass_4
   - first:
-      213: -4302731381809044040
-    second: DoorSmallAnim_5
+      213: -830651746577204119
+    second: Hour Glass_5
   - first:
-      213: 8840933217357080033
-    second: DoorSmallAnim_6
+      213: 3054320990674939481
+    second: Hour Glass_6
   - first:
-      213: -4944297334871106071
-    second: DoorSmallAnim_7
+      213: -232552029294812688
+    second: Hour Glass_7
+  - first:
+      213: -6141503581431924372
+    second: Hour Glass_8
+  - first:
+      213: 7390750951472172933
+    second: Hour Glass_9
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -105,7 +111,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Windows Store Apps
     maxTextureSize: 2048
@@ -117,7 +123,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 2048
@@ -129,7 +135,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
@@ -141,18 +147,18 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DoorSmallAnim_0
+      name: Hour Glass_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 1
         width: 32
-        height: 64
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ceb7375f46f1fb4cb20da72cc187599
-      internalID: 8185400763691481508
+      spriteID: 738c5316a42c29c4f9bc13cb293e895d
+      internalID: 8096991151837698020
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DoorSmallAnim_1
+      name: Hour Glass_1
       rect:
         serializedVersion: 2
         x: 32
-        y: 0
+        y: 1
         width: 32
-        height: 64
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e72881d5df2fb54092ce9e601f2f37d
-      internalID: -5489131158520089517
+      spriteID: 40d73c83d88d5d648acde18bd3c59b38
+      internalID: 6536599152040949578
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DoorSmallAnim_2
+      name: Hour Glass_2
       rect:
         serializedVersion: 2
         x: 64
-        y: 0
+        y: 1
         width: 32
-        height: 64
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3d0858a03b63cf4581da8d36a05b526
-      internalID: 3312785519126824136
+      spriteID: b82f1188f06883b47bcaed17bdee5cb9
+      internalID: -1494081070161981072
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DoorSmallAnim_3
+      name: Hour Glass_3
       rect:
         serializedVersion: 2
         x: 96
-        y: 0
+        y: 1
         width: 32
-        height: 64
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e750002f8e0eb314ca8894d66cbb334e
-      internalID: -3053971041117606955
+      spriteID: f1c92b2956faf014f9c664c493db66d0
+      internalID: -8702554349983349050
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DoorSmallAnim_4
+      name: Hour Glass_4
       rect:
         serializedVersion: 2
         x: 128
-        y: 0
+        y: 1
         width: 32
-        height: 64
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,20 +250,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3a83677241c2b5458e50f4c5b8afd35
-      internalID: 7972807223341403960
+      spriteID: ee7a482f1a89ddc4580d36ec44f4e250
+      internalID: 1328329428329317500
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DoorSmallAnim_5
+      name: Hour Glass_5
       rect:
         serializedVersion: 2
         x: 160
-        y: 0
+        y: 1
         width: 32
-        height: 64
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,20 +271,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17c4b361d6a0b4c43b4a8ca20521fe18
-      internalID: -4302731381809044040
+      spriteID: 51428107b8b03224db2b4d9edcec9e35
+      internalID: -830651746577204119
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DoorSmallAnim_6
+      name: Hour Glass_6
       rect:
         serializedVersion: 2
         x: 192
-        y: 0
+        y: 1
         width: 32
-        height: 64
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -286,20 +292,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c67f4e703a98b24c87e7694a8cd41b4
-      internalID: 8840933217357080033
+      spriteID: e5d7fed987affdb40b4cdd000a7ed915
+      internalID: 3054320990674939481
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DoorSmallAnim_7
+      name: Hour Glass_7
       rect:
         serializedVersion: 2
         x: 224
-        y: 0
+        y: 1
         width: 32
-        height: 64
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -307,8 +313,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 55a4a6258f85d5641bace6c32ff0936e
-      internalID: -4944297334871106071
+      spriteID: 3110d814ca4e6c345ae3504aa8678e3c
+      internalID: -232552029294812688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hour Glass_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6022263f91f44d46ace953b91017d50
+      internalID: -6141503581431924372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hour Glass_9
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 732e900e3544668429f327652bf19a63
+      internalID: 7390750951472172933
       vertices: []
       indices: 
       edges: []
@@ -316,7 +364,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: edaf4deaa9f1524469db5422aa953b89
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 

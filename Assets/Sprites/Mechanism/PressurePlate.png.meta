@@ -1,31 +1,25 @@
 fileFormatVersion: 2
-guid: ed51bcf610e2ce64e8778c074ff64933
+guid: 6dee7cbc4a3fb0a42bb4e4536f50488b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8185400763691481508
-    second: DoorSmallAnim_0
+      213: 5652156558631736147
+    second: PressurePlate_0
   - first:
-      213: -5489131158520089517
-    second: DoorSmallAnim_1
+      213: 9069228089427178928
+    second: PressurePlate_1
   - first:
-      213: 3312785519126824136
-    second: DoorSmallAnim_2
+      213: -3699050559295564077
+    second: PressurePlate_2
   - first:
-      213: -3053971041117606955
-    second: DoorSmallAnim_3
+      213: -2707533449794039538
+    second: PressurePlate_3
   - first:
-      213: 7972807223341403960
-    second: DoorSmallAnim_4
+      213: -6855430850401321117
+    second: PressurePlate_4
   - first:
-      213: -4302731381809044040
-    second: DoorSmallAnim_5
-  - first:
-      213: 8840933217357080033
-    second: DoorSmallAnim_6
-  - first:
-      213: -4944297334871106071
-    second: DoorSmallAnim_7
+      213: 7486274029684862246
+    second: PressurePlate_5
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -146,13 +140,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DoorSmallAnim_0
+      name: PressurePlate_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 32
-        height: 64
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,20 +154,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ceb7375f46f1fb4cb20da72cc187599
-      internalID: 8185400763691481508
+      spriteID: 51ed4d5cbd83d1941b051ec2bcbddf16
+      internalID: 5652156558631736147
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DoorSmallAnim_1
+      name: PressurePlate_1
       rect:
         serializedVersion: 2
         x: 32
         y: 0
         width: 32
-        height: 64
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +175,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e72881d5df2fb54092ce9e601f2f37d
-      internalID: -5489131158520089517
+      spriteID: 7c2f97666d47c2e44a1311d6232f4676
+      internalID: 9069228089427178928
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DoorSmallAnim_2
+      name: PressurePlate_2
       rect:
         serializedVersion: 2
         x: 64
         y: 0
         width: 32
-        height: 64
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,20 +196,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3d0858a03b63cf4581da8d36a05b526
-      internalID: 3312785519126824136
+      spriteID: d22cd5020cc5440438da2ebef651250c
+      internalID: -3699050559295564077
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DoorSmallAnim_3
+      name: PressurePlate_3
       rect:
         serializedVersion: 2
         x: 96
         y: 0
         width: 32
-        height: 64
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,20 +217,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e750002f8e0eb314ca8894d66cbb334e
-      internalID: -3053971041117606955
+      spriteID: e77294bcd23f76f44b03c72172a6aa01
+      internalID: -2707533449794039538
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DoorSmallAnim_4
+      name: PressurePlate_4
       rect:
         serializedVersion: 2
         x: 128
         y: 0
         width: 32
-        height: 64
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,20 +238,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3a83677241c2b5458e50f4c5b8afd35
-      internalID: 7972807223341403960
+      spriteID: 2a2d03150cf2e204b960d47fc35412df
+      internalID: -6855430850401321117
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DoorSmallAnim_5
+      name: PressurePlate_5
       rect:
         serializedVersion: 2
         x: 160
         y: 0
         width: 32
-        height: 64
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,50 +259,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17c4b361d6a0b4c43b4a8ca20521fe18
-      internalID: -4302731381809044040
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DoorSmallAnim_6
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 32
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3c67f4e703a98b24c87e7694a8cd41b4
-      internalID: 8840933217357080033
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DoorSmallAnim_7
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 0
-        width: 32
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 55a4a6258f85d5641bace6c32ff0936e
-      internalID: -4944297334871106071
+      spriteID: ca32224a73d122b48a7534f8d79c06f7
+      internalID: 7486274029684862246
       vertices: []
       indices: 
       edges: []
@@ -316,7 +268,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: edaf4deaa9f1524469db5422aa953b89
+    spriteID: b9cb0574661b5bc4db33656d69e7ad91
     internalID: 0
     vertices: []
     indices: 

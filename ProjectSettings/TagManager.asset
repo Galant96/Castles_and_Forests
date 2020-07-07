@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - Collectibles
   - Enemy
+  - Object
   layers:
   - Default
   - TransparentFX
@@ -25,7 +26,7 @@ TagManager:
   - Collectibles
   - Decorations
   - Bombs
-  - 
+  - Objects
   - 
   - 
   - 
@@ -52,6 +53,9 @@ TagManager:
     locked: 0
   - name: Climbing
     uniqueID: 700475081
+    locked: 0
+  - name: Objects
+    uniqueID: 2657409151
     locked: 0
   - name: Enemy
     uniqueID: 1518766019

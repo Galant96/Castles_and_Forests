@@ -69,7 +69,6 @@ public class PlayerCharacter : BaseCharacter
 		Jump();
 		Climb();
 		// Attack(); // Set to button control
-		Debug.Log(MyRigidbody2D.velocity);
 	}
 
 	protected override void FlipSprite()
@@ -160,11 +159,9 @@ public class PlayerCharacter : BaseCharacter
 	private void Jump()
 	{
 		// Check if the player is grounded to prevent a double jump
-		if (!myFeetBoxCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
+		if (!myFeetBoxCollider.IsTouchingLayers(LayerMask.GetMask("Ground", "Objects")))
 		{
 			bool playerHasVerticalSpeed = MyRigidbody2D.velocity.y > 0;
-
-			Debug.Log(MyRigidbody2D.velocity.y);
 
 			if (playerHasVerticalSpeed)
 			{
