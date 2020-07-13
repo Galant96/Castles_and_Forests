@@ -15,39 +15,56 @@ public class GameManager : MonoBehaviour
 	private TextMeshProUGUI scoreText = null;
 
 	[SerializeField]
-	private TextMeshProUGUI playerLivesText = null;
-
-	[SerializeField]
 	private TextMeshProUGUI timeText = null;
 
 	[SerializeField]
 	private Image[] bombImages = null;
+	[SerializeField]
+	private Image[] lifeImages = null;
+	[SerializeField]
+	private Image[] keyImages = null;
+
+	// Music
+	[SerializeField]
+	private string mainMusicTitle = "change";
+	private Sound music = null;
 
 	// Configs
 	[SerializeField]
 	private int playerLives = 3;
-
 	public int PlayerLives { get { return playerLives; } set { playerLives = value; } }
-
-	public float Time { get; private set; } = 0f;
-
-	public int Score { get; set; } = 0;
+	private int maxNumberOfLives = 0;
+	public int MaxNumberOfLives { get { return maxNumberOfLives; } private set { maxNumberOfLives = value; } }
 
 	[SerializeField]
 	private int numberOfBombs = 3;
-
 	public int NumberOfBombs { get { return numberOfBombs; } set { numberOfBombs = value; } }
-
 	private int maxNumberOfBombs = 0;
 	public int MaxNumberOfBombs { get { return maxNumberOfBombs; } private set { maxNumberOfBombs = value; } }
 
+	[SerializeField]
+	private int numberOfKeys = 3;
+	public int NumberOfKeys { get { return numberOfKeys; } set { numberOfKeys = value; } }
+	private int maxNumberOfKeys = 0;
+	public int MaxNumberOfKeys { get { return maxNumberOfKeys; } private set { maxNumberOfKeys = value; } }
 
-	// Events
+	public float Time { get; private set; } = 0f;
+	public int Score { get; set; } = 0;
 
 	private void Awake()
 	{
 		SetUpSingelton();
+
 		maxNumberOfBombs = bombImages.Length;
+		maxNumberOfLives = lifeImages.Length;
+		maxNumberOfKeys = keyImages.Length;
+
+		music = SoundManager.Instance.GetSound(mainMusicTitle);
+	}
+
+	private void Start()
+	{
+		music.AudioSource.Play();
 	}
 
 	private void SetUpSingelton()
@@ -65,8 +82,8 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
-    // Update is called once per frame
-    void Update()
+	// Update is called once per frame
+	void Update()
     {
 		if (levelLoader == null)
 		{
@@ -74,11 +91,11 @@ public class GameManager : MonoBehaviour
 		}
 
 		// Manage UI
-		DisplayLife();
 		DisplayScore();
 		DisplayTime();
-		SetBombsUI();
-
+		SetUI(ref bombImages, numberOfBombs, maxNumberOfBombs);
+		SetUI(ref lifeImages, playerLives, maxNumberOfLives);
+		SetUI(ref keyImages, numberOfKeys, maxNumberOfKeys);
 	}
 
 	public void ProcessPlayerDeath()
@@ -99,9 +116,11 @@ public class GameManager : MonoBehaviour
 		yield return new WaitForSeconds(2);
 		// Pause all sounds
 		SoundManager.Instance.PauseAllSounds();
+		music.AudioSource.Stop();
 
 		// Restart the level 
 		levelLoader.LoadTheSameSceneAgain();
+		music.AudioSource.Play();
 	}
 
 	private void TakeLife()
@@ -109,13 +128,6 @@ public class GameManager : MonoBehaviour
 		StartCoroutine(PrepareToLoadingSceneAgain());	
 	}
 
-	private void DisplayLife()
-	{
-		if (playerLivesText.text != null)
-		{
-			playerLivesText.text = PlayerLives.ToString();
-		}
-	}
 
 	private void DisplayScore()
 	{
@@ -165,18 +177,28 @@ public class GameManager : MonoBehaviour
 		PlayerCharacter.Instance.Attack();
 	}
 
-	public void SetBombsUI()
+	public void SetUI(ref Image [] images, int numberImages, int maxNumberImages)
 	{
-		for (int i = 0; i < maxNumberOfBombs; i++)
+		for (int i = 0; i < maxNumberImages; i++)
 		{
-			if (i < numberOfBombs)
+			if (i < numberImages)
 			{
-				bombImages[i].enabled = true;
+				images[i].enabled = true;
 			}
 			else
 			{
-				bombImages[i].enabled = false;
+				images[i].enabled = false;
 			}
 		}
+	}
+
+	public void GetTreasure(bool chestWasOpened)
+	{
+		if (chestWasOpened != true)
+		{
+			return;
+		}
+
+		Debug.Log("Display an add!");
 	}
 }

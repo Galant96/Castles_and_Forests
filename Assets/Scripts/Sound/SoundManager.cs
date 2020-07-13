@@ -24,6 +24,10 @@ public class SoundManager : MonoBehaviour
 		}
 	}
 
+	public Sound GetSound(string name)
+	{
+		return sounds.Find(sounds => sounds.SoundName == name);
+	}
 
 	public void PlaySound(string name)
 	{

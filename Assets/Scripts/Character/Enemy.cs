@@ -9,6 +9,7 @@ public class Enemy : BaseCharacter
 	private BoxCollider2D wallCollider = null;
 	private CharacterSoundKeeper soundKeeper = null;
 	private bool isAlive = true;
+	public bool IsAlive { get => isAlive; set => isAlive = value; }
 
 	[SerializeField, Header("Register to know if enemy is died, and grant score to the player.")]
 	OnScoreEvent onScore = null;
@@ -43,7 +44,6 @@ public class Enemy : BaseCharacter
 		// Make sure that enemy is hit only once
 		MyBodyCollider2D.enabled = false;
 
-		isAlive = false;
 		MyRigidbody2D.velocity = Vector2.zero;
 
 		// Play death animation and sound

@@ -14,10 +14,16 @@ public class Weapon : MonoBehaviour
 	private void OnTriggerEnter2D(Collider2D enemyCollider)
 	{
 		bool isEnemy = weaponCollider.IsTouchingLayers(LayerMask.GetMask("Enemy"));
-		if (isEnemy && weaponCollider.enabled == true)
+		Enemy enemy = enemyCollider.gameObject.GetComponent<Enemy>();
+
+		if (isEnemy && weaponCollider.enabled == true && enemy != null)
 		{
-			Debug.Log(enemyCollider);
-			enemyCollider.gameObject.GetComponent<Enemy>().EnemyTakesDamage(isEnemy);
+			if (enemy.IsAlive != false)
+			{
+				enemy.IsAlive = false;
+				enemy.EnemyTakesDamage(isEnemy);
+				Debug.Log(enemyCollider);
+			}
 		}
 	}
 }

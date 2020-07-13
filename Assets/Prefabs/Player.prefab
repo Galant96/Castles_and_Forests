@@ -75,9 +75,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.2, y: -0.4}
+  m_Offset: {x: 0.5, y: -0.1}
   serializedVersion: 2
-  m_Radius: 0.2
+  m_Radius: 0.7
 --- !u!114 &1794900388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107,7 +107,6 @@ GameObject:
   - component: {fileID: 1914659195}
   - component: {fileID: 1914659194}
   - component: {fileID: 338093524}
-  - component: {fileID: 837467867}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -189,7 +188,7 @@ MonoBehaviour:
     type: 3}
   throwPoint: {fileID: 679516867}
   numberOfTrajectoryPoints: 30
-  throwPower: {x: 2, y: 5}
+  throwPower: {x: 2, y: 3.5}
 --- !u!212 &5845743644274396959
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -226,7 +225,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -882158295
-  m_SortingLayer: 7
+  m_SortingLayer: 10
   m_SortingOrder: 0
   m_Sprite: {fileID: -6284238159451314180, guid: 81552441e47ef244b86235611c2a0410,
     type: 3}
@@ -293,8 +292,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.06632304, y: -0.24692893}
-  m_Size: {x: 0.6013284, y: 1.2702088}
+  m_Offset: {x: 0.075294495, y: -0.24692893}
+  m_Size: {x: 0.6730995, y: 1.2702088}
   m_Direction: 0
 --- !u!61 &338093524
 BoxCollider2D:
@@ -309,7 +308,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.057314396, y: -0.89733005}
+  m_Offset: {x: 0.070771694, y: -0.89733005}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -320,20 +319,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.43123198, y: 0.08096266}
+  m_Size: {x: 0.49403095, y: 0.08096266}
   m_EdgeRadius: 0
---- !u!114 &837467867
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5845743644274396945}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1c6daced3d14e04998e9a6824c9eb41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bombPrefab: {fileID: 2022887813776465586, guid: 8295e8a73e2a7a746a4589fe058ce7d1,
-    type: 3}
-  throwerPoint: {fileID: 679516867}

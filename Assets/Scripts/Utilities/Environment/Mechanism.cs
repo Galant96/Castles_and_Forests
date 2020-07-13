@@ -5,20 +5,15 @@ using UnityEngine;
 /// <summary>
 /// This class is responsible for running various mechanism such as doors, press plates or levers in the game.
 /// </summary>
-public class Mechanism : MonoBehaviour
+public abstract class Mechanism : MonoBehaviour
 {
 	[SerializeField]
-	private Animator animator = null;
+	protected Animator animator = null;
 
 	[SerializeField, Header("Register to know, when the mechanism is on.")]
-	private OnMechanismEvent onMechanismWork = null;
+	protected OnMechanismEvent onMechanismWork = null;
 
-	private void Start()
-	{
-		animator = GetComponent<Animator>();
-	}
-
-	private void OnTriggerEnter2D(Collider2D collision)
+	protected virtual void OnTriggerEnter2D(Collider2D collision)
 	{
 		if (collision.CompareTag("Player") || collision.CompareTag("Enemy") || collision.CompareTag("Object"))
 		{
@@ -27,7 +22,7 @@ public class Mechanism : MonoBehaviour
 		}
 	}
 
-	private void OnTriggerExit2D(Collider2D collision)
+	protected virtual void OnTriggerExit2D(Collider2D collision)
 	{
 		if (collision.CompareTag("Player") || collision.CompareTag("Enemy") || collision.CompareTag("Object"))
 		{

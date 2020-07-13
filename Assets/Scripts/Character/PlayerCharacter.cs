@@ -126,7 +126,7 @@ public class PlayerCharacter : BaseCharacter
 
 	public override void Move()
 	{
-
+		
 		float controlThrow = joystick.Horizontal; // Value is between -1 to +1
 
 		playerVelocity = new Vector2(controlThrow * Speed, MyRigidbody2D.velocity.y);
@@ -209,6 +209,12 @@ public class PlayerCharacter : BaseCharacter
 	public void OnGrandScore(int score)
 	{
 		GameManager.Instance.Score += score;
+	}
+
+	// Receive a key
+	public void OnGetKey(int keyNumbers)
+	{
+		GameManager.Instance.NumberOfKeys += keyNumbers;
 	}
 
 	public void OnJumpPotion(int newJumpSpeed)

@@ -8,6 +8,7 @@ TagManager:
   - Collectibles
   - Enemy
   - Object
+  - Weapon
   layers:
   - Default
   - TransparentFX
@@ -54,9 +55,6 @@ TagManager:
   - name: Climbing
     uniqueID: 700475081
     locked: 0
-  - name: Objects
-    uniqueID: 2657409151
-    locked: 0
   - name: Enemy
     uniqueID: 1518766019
     locked: 0
@@ -71,6 +69,9 @@ TagManager:
     locked: 0
   - name: Moveable
     uniqueID: 4244598371
+    locked: 0
+  - name: Objects
+    uniqueID: 2657409151
     locked: 0
   - name: Player
     uniqueID: 3412809001

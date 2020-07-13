@@ -80,7 +80,7 @@ public class LevelLoader : MonoBehaviour
 	}
 
 	// Untility methods to wait for an animation end
-	// After, load a needed scene
+	// After, load a scene
 	IEnumerator WaitForAnimation(string animationName)
 	{
 		Debug.Log("Loading a scene...");

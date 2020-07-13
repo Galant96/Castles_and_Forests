@@ -11,7 +11,7 @@ public class GameplayCamera : MonoBehaviour
 	private float startSize;
 
 	[SerializeField]
-	private GameObject background;
+	private GameObject background = null;
 
 	private Vector2 scaleVector;
 
@@ -21,7 +21,11 @@ public class GameplayCamera : MonoBehaviour
 		mainCamera = Camera.main;
 		size = mainCamera.orthographicSize;
 		startSize = size;
-		scaleVector = background.transform.localScale;
+
+		if (background != null)
+		{
+			scaleVector = background.transform.localScale;
+		}
 	}
 
     // Update is called once per frame
@@ -29,7 +33,10 @@ public class GameplayCamera : MonoBehaviour
     {
 		size = mainCamera.orthographicSize;
 
-		ResizeBackground();
+		if (background != null)
+		{
+			ResizeBackground();
+		}
 	}
 
 	private void ResizeBackground()
