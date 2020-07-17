@@ -42,6 +42,10 @@ public class Thrower : MonoBehaviour
 
 	private void FixedUpdate()
 	{
+		if (IsPointerOverUIObject() == true)
+		{
+			return;
+		}
 
 		if (Input.touchCount > 0 && PlayerCharacter.Instance.PlayerVelocity.x == 0)
 		{
@@ -57,6 +61,11 @@ public class Thrower : MonoBehaviour
 					if (!objectModel)
 					{
 						CreateObject();
+						// Disactive interface's buttons while the character is throwing.
+						if (GameManager.Instance.NumberOfBombs > 0)
+						{
+							GameManager.Instance.InterfaceButtons.SetActive(false);
+						}
 					}
 					break;
 				case TouchPhase.Ended:
@@ -65,6 +74,8 @@ public class Thrower : MonoBehaviour
 					if (objectModel != null)
 					{
 						ThrowObject();
+						// Active interface's buttons when the bomb was thrown.
+						GameManager.Instance.InterfaceButtons.SetActive(true);
 					}
 					break;
 

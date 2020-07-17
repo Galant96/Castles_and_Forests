@@ -5,6 +5,7 @@ public class Collectibles : MonoBehaviour
 {
 	[SerializeField]
 	private int value = 1;
+	public int Value { get => value; private set => this.value = value; }
 
 	[SerializeField]
 	private string tagType = "Player";
@@ -24,8 +25,14 @@ public class Collectibles : MonoBehaviour
 				SoundManager.Instance.PlaySound(soundName);
 			}
 
-			onCollectibleHit.Invoke(value);
+			InvokeOnCollectibleHit(1);
+
 			Destroy(gameObject);
 		}
+	}
+
+	public void InvokeOnCollectibleHit(int multiplayer)
+	{
+		onCollectibleHit.Invoke(value * multiplayer);
 	}
 }

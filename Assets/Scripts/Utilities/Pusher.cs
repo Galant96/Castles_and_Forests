@@ -31,15 +31,14 @@ public class Pusher : MonoBehaviour
 
 	bool changeDirection = false;
 
-
 	private Rigidbody2D pusherRigidbody;
+	[SerializeField]
 	private BoxCollider2D pusherCollider;
 
     // Start is called before the first frame update
     void Start()
     {
 		pusherRigidbody = GetComponent<Rigidbody2D>();
-		pusherCollider = GetComponent<BoxCollider2D>();
 
 		// Set the pushing Vector
 		switch (pushingDirections)
@@ -81,6 +80,11 @@ public class Pusher : MonoBehaviour
 
 	private void Update()
 	{
+		if (pusherCollider.IsTouchingLayers(LayerMask.GetMask("Player")) != false)
+		{
+			PlayerCharacter.Instance.transform.parent = transform;
+		}
+
 		Push();
 	}
 
@@ -96,11 +100,19 @@ public class Pusher : MonoBehaviour
 		}
 	}
 
-	private void OnTriggerEnter2D(Collider2D wall)
+	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		if (wall.CompareTag("Ground"))
+		if (pusherCollider.IsTouchingLayers(LayerMask.GetMask("Ground")) != false)
 		{
 			changeDirection = !changeDirection;
+		}	
+	}
+
+	private void OnTriggerExit2D(Collider2D collision)
+	{
+		if (collision.CompareTag("Player") == true)
+		{
+			PlayerCharacter.Instance.transform.parent = null;
 		}
 	}
 

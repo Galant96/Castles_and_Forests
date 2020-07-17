@@ -9,7 +9,7 @@ public class Lever : Mechanism
 	
 	protected override void OnTriggerEnter2D(Collider2D collision)
 	{
-		if (collision.CompareTag("Weapon"))
+		if (collision.CompareTag("Weapon") || collision.CompareTag("Object"))
 		{
 			isPressed = !isPressed;
 			animator.SetBool("Pressing", isPressed);

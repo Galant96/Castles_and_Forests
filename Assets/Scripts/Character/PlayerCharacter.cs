@@ -24,7 +24,6 @@ public class PlayerCharacter : BaseCharacter
 	private BoxCollider2D myFeetBoxCollider = null;
 	private CircleCollider2D weapon = null;
 
-
 	private CharacterSoundKeeper soundKeeper = null;
 
 	private bool isAlive = true;
@@ -79,11 +78,20 @@ public class PlayerCharacter : BaseCharacter
 	// Attack is performed by pushing the button
 	public override void Attack()
 	{
+		if (isAlive != true)
+		{
+			return;
+		}
+
 		bool isPlayerStatic = MyRigidbody2D.velocity == Vector2.zero;
 
 		if (isPlayerStatic)
 		{
-			EnableWeapon(true);
+			if (weapon.enabled != true)
+			{
+				EnableWeapon(true);
+			}
+
 			Animator.SetTrigger("Attacking");
 		}
 	}
@@ -146,7 +154,7 @@ public class PlayerCharacter : BaseCharacter
 			return;
 		}
 
-		float controlThrow = joystick.Vertical;
+		float controlThrow = 1f;
 
 		if (controlThrow > 0)
 		{
@@ -247,8 +255,6 @@ public class PlayerCharacter : BaseCharacter
 			return;
 		}
 	}
-
-
 
 }
 

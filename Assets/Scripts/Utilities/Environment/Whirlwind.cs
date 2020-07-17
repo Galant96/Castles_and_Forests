@@ -8,6 +8,9 @@ public class Whirlwind : MonoBehaviour
 	private float colliderHeight = 3.75f;
 
 	[SerializeField]
+	private float colliderWidth = 3.75f;
+
+	[SerializeField]
 	private float particlesLifetime = 0.7f;
 
 	private ParticleSystem.MainModule whirlwindParticles;
@@ -22,7 +25,7 @@ public class Whirlwind : MonoBehaviour
 
 		whirlwindParticles.startLifetime = particlesLifetime;
 
-		Vector2 newSize = new Vector2(whirlwindCollider.size.x, colliderHeight);
+		Vector2 newSize = new Vector2(colliderWidth, colliderHeight);
 
 		whirlwindCollider.size = newSize;
 	}

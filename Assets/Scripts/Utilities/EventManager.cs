@@ -15,3 +15,6 @@ public class OnThrowEvent : UnityEvent<Vector2> { };
 
 [System.Serializable]
 public class OnMechanismEvent : UnityEvent<bool> { };
+
+[System.Serializable]
+public class OnTeleportationEvent : UnityEvent<GameObject> { };

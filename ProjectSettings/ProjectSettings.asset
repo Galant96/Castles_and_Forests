@@ -624,10 +624,10 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: b34bd362-ff6d-47bf-8255-4b224ef4772b
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: Castles & Forests
+  organizationId: bartosz-galantowicz
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

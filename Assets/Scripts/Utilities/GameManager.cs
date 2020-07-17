@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -16,6 +17,27 @@ public class GameManager : MonoBehaviour
 
 	[SerializeField]
 	private TextMeshProUGUI timeText = null;
+
+	[SerializeField]
+	private GameObject treasureCanvas = null;
+
+	[SerializeField]
+	private GameObject interfaceButtons = null;
+	public GameObject InterfaceButtons { get => interfaceButtons; set => interfaceButtons = value; }
+
+	[SerializeField]
+	private GameObject [] treasureSlots = new GameObject[3];
+
+	[SerializeField]
+	private List<GameObject> collectablesPrefab = null;
+
+	[SerializeField]
+	private Button videoGoldButton = null;
+	public Button VideoGoldButton { get => videoGoldButton; set => videoGoldButton = value; }
+
+	[SerializeField]
+	private Button videoLifeButton = null;
+	public Button VideoLifeButton { get => videoLifeButton; set => videoLifeButton = value; }
 
 	[SerializeField]
 	private Image[] bombImages = null;
@@ -51,6 +73,29 @@ public class GameManager : MonoBehaviour
 	public float Time { get; private set; } = 0f;
 	public int Score { get; set; } = 0;
 
+	// Number of items from the treasure
+	private int numberOfItems = 3;
+
+	public enum Reward
+	{
+		treasure,
+		health
+	}
+
+	[SerializeField]
+	private Reward rewardType = new Reward();
+	public Reward RewardType { get => rewardType; set => rewardType = value; }
+
+	public void SetRewardToTreasure()
+	{
+		rewardType = Reward.treasure;
+	}
+
+	public void SetRewardToHealth()
+	{
+		rewardType = Reward.health;
+	}
+
 	private void Awake()
 	{
 		SetUpSingelton();
@@ -64,6 +109,8 @@ public class GameManager : MonoBehaviour
 
 	private void Start()
 	{
+		// Set the selector panle disactive.
+		treasureCanvas.SetActive(false);
 		music.AudioSource.Play();
 	}
 
@@ -90,12 +137,32 @@ public class GameManager : MonoBehaviour
 			levelLoader = GetComponentInChildren<LevelLoader>();
 		}
 
+		checkMaxNumberOfPlayersStats();
+
 		// Manage UI
 		DisplayScore();
 		DisplayTime();
 		SetUI(ref bombImages, numberOfBombs, maxNumberOfBombs);
 		SetUI(ref lifeImages, playerLives, maxNumberOfLives);
 		SetUI(ref keyImages, numberOfKeys, maxNumberOfKeys);
+	}
+
+	private void checkMaxNumberOfPlayersStats()
+	{
+		if (playerLives > maxNumberOfLives)
+		{
+			playerLives = maxNumberOfLives;
+		}
+
+		if (numberOfBombs > maxNumberOfBombs)
+		{
+			numberOfBombs = maxNumberOfBombs;
+		}
+
+		if (numberOfKeys > maxNumberOfKeys)
+		{
+			numberOfKeys = maxNumberOfKeys;
+		}
 	}
 
 	public void ProcessPlayerDeath()
@@ -199,6 +266,40 @@ public class GameManager : MonoBehaviour
 			return;
 		}
 
+		treasureCanvas.SetActive(true);
+
+		GameObject[] randomItems = new GameObject[numberOfItems];
+		int[] multiplayers = new int[numberOfItems];
+
+
+		// Get random items from the treasure.
+		for (int i = 0; i < randomItems.Length; i++)
+		{
+			randomItems[i] = collectablesPrefab[Random.Range(0, collectablesPrefab.Count-1)];
+			multiplayers[i] = Random.Range(1, 10);
+
+			Debug.Log(multiplayers[i]);
+			treasureSlots[i].GetComponent<Image>().sprite = randomItems[i].GetComponent<SpriteRenderer>().sprite;
+			treasureSlots[i].GetComponentInChildren<TextMeshProUGUI>().text = " X " + multiplayers[i];
+
+			randomItems[i].GetComponent<Collectibles>().InvokeOnCollectibleHit(multiplayers[i]);
+		}
+
 		Debug.Log("Display an add!");
+	}
+
+	public void ActiveButton(Button button)
+	{
+		button.gameObject.SetActive(false);
+	}
+
+	public void ActiveButton(Button button, bool isActive)
+	{
+		button.gameObject.SetActive(isActive);
+	}
+
+	public void ExitCanvas(GameObject canvas)
+	{
+		canvas.SetActive(false);
 	}
 }
