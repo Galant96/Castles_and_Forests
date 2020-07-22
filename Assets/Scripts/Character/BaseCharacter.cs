@@ -9,13 +9,20 @@ public abstract class BaseCharacter : MonoBehaviour, IBaseCharacter
 
 	// State
 	// TO DO
+	protected enum FlippingSite
+	{
+		left = -1,
+		right = 1
+	}
+
+	protected FlippingSite flippingSite = new FlippingSite();
 
 	// Cached component references
 	private Rigidbody2D myRigidbody2D;
-	public Rigidbody2D MyRigidbody2D { get => myRigidbody2D;}
+	public Rigidbody2D MyRigidbody2D { get => myRigidbody2D; set => myRigidbody2D = value; }
 
 	private Animator animator;
-	public Animator Animator { get => animator;}
+	public Animator CharacterAnimator { get => animator;}
 
 	private CapsuleCollider2D myBodyCollider2D;
 	public CapsuleCollider2D MyBodyCollider2D { get => myBodyCollider2D; }
@@ -39,6 +46,15 @@ public abstract class BaseCharacter : MonoBehaviour, IBaseCharacter
 			// Scale x -1 or 1 to flip the character
 			// Mathf.Sign(f) returns 1 if f is pos or 0, and -1 when f is neg
 			transform.localScale = new Vector2(Mathf.Sign(myRigidbody2D.velocity.x), 1f);
+
+			if (transform.localScale.x == 1)
+			{
+				flippingSite = FlippingSite.right;
+			}
+			else if (transform.localScale.x == -1)
+			{
+				flippingSite = FlippingSite.left;
+			}
 		}
 	}
 

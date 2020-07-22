@@ -14,17 +14,31 @@ public class PlayerCharacter : BaseCharacter
 	private float climbSpeed = 5f;
 	[SerializeField]
 	Vector2 deathKick = new Vector2(25f, 25f);
+	[SerializeField]
+	Vector2 dashKick = new Vector2(50f, 0f);
+	[SerializeField]
+	float dashingTime = 1f;
 
 	private Vector2 playerVelocity;
 	public Vector2 PlayerVelocity { get => playerVelocity; set => playerVelocity = value; }
 
 	[SerializeField]
+	private GameObject dashForm = null;
+
+	[SerializeField]
 	private Joystick joystick = null;
 
+	[SerializeField]
 	private BoxCollider2D myFeetBoxCollider = null;
 	private CircleCollider2D weapon = null;
 
 	private CharacterSoundKeeper soundKeeper = null;
+
+	private bool isDashing = false;
+	public bool IsDashing
+	{
+		get { return isDashing; }
+	}
 
 	private bool isAlive = true;
 	public bool IsAlive
@@ -35,17 +49,23 @@ public class PlayerCharacter : BaseCharacter
 
 
 	// Events
-
+	[SerializeField, Header("Register to know if character is spawned.")]
+	OnCharacterSpawn onCharacterSpawn = null;
 	// Start is called before the first frame update
 	protected override void Start()
     {
 		Instance = this;
 
+		// Spawn character at the spawn point.
+		onCharacterSpawn.Invoke(gameObject);
+
 		base.Start();
 		soundKeeper = GetComponent<CharacterSoundKeeper>();
 
-		myFeetBoxCollider = GetComponent<BoxCollider2D>();
+		//myFeetBoxCollider = GetComponent<BoxCollider2D>();
 		weapon = GetComponentInChildren<CircleCollider2D>();
+
+		flippingSite = FlippingSite.right;
 	}
 
 	// Update is called once per frame
@@ -60,6 +80,21 @@ public class PlayerCharacter : BaseCharacter
 		if (isAlive == false)
 		{
 			return;
+		}
+
+		// Do if player is dashing. 
+		if (isDashing == true)
+		{
+			transform.parent = null;
+
+			if (flippingSite == FlippingSite.right)
+			{
+				MyRigidbody2D.AddForce(dashKick * Speed, ForceMode2D.Force);
+			}
+			else if(flippingSite == FlippingSite.left)
+			{
+				MyRigidbody2D.AddForce(-dashKick * Speed, ForceMode2D.Force);
+			}
 		}
 
 		Die();
@@ -92,7 +127,7 @@ public class PlayerCharacter : BaseCharacter
 				EnableWeapon(true);
 			}
 
-			Animator.SetTrigger("Attacking");
+			CharacterAnimator.SetTrigger("Attacking");
 		}
 	}
 
@@ -110,7 +145,7 @@ public class PlayerCharacter : BaseCharacter
 	public override void Die()
 	{
 		bool isPlayerTrapped = MyBodyCollider2D.IsTouchingLayers(LayerMask.GetMask("Enemy", "Hazards", "Water"));
-		if (isPlayerTrapped)
+		if (isPlayerTrapped && isDashing != true)
 		{
 			isAlive = false;
 
@@ -125,7 +160,7 @@ public class PlayerCharacter : BaseCharacter
 				MyRigidbody2D.velocity = deathKick;
 			}
 
-			Animator.SetBool("Dying", true);
+			CharacterAnimator.SetBool("Dying", true);
 
 			// Process player death from by calling a method from the game manager instance
 			GameManager.Instance.ProcessPlayerDeath();
@@ -142,7 +177,7 @@ public class PlayerCharacter : BaseCharacter
 
 		// Set true if character is moving
 		bool isHorizontalSpeed = Mathf.Abs(MyRigidbody2D.velocity.x) > Mathf.Epsilon;
-		Animator.SetBool("Running", isHorizontalSpeed);
+		CharacterAnimator.SetBool("Running", isHorizontalSpeed);
 
 	}
 
@@ -174,23 +209,23 @@ public class PlayerCharacter : BaseCharacter
 			if (playerHasVerticalSpeed)
 			{
 
-				Animator.SetBool("Jumping", true);
-				Animator.SetBool("Falling", false);
-				Animator.SetBool("Running", false);
+				CharacterAnimator.SetBool("Jumping", true);
+				CharacterAnimator.SetBool("Falling", false);
+				CharacterAnimator.SetBool("Running", false);
 			}
 			else
 			{
-				Animator.SetBool("Jumping", false);
-				Animator.SetBool("Falling", true);
-				Animator.SetBool("Running", false);
+				CharacterAnimator.SetBool("Jumping", false);
+				CharacterAnimator.SetBool("Falling", true);
+				CharacterAnimator.SetBool("Running", false);
 			}
 
 			return;
 		}
 		else
 		{
-			Animator.SetBool("Jumping", false);
-			Animator.SetBool("Falling", false);
+			CharacterAnimator.SetBool("Jumping", false);
+			CharacterAnimator.SetBool("Falling", false);
 		}
 
 		float verticalMovement = joystick.Vertical;
@@ -204,7 +239,7 @@ public class PlayerCharacter : BaseCharacter
 
 	public void PauseJumping()
 	{
-		Animator.enabled = false;
+		CharacterAnimator.enabled = false;
 	}
 
 	// Restore player's life on the potion collision
@@ -254,6 +289,63 @@ public class PlayerCharacter : BaseCharacter
 		{
 			return;
 		}
+	}
+
+	public void Dash()
+	{
+		if (isAlive != false)
+		{
+			StartCoroutine(StartDashing(isDashing));
+		}
+	}
+
+	IEnumerator StartDashing(bool isPlayerDashing)
+	{
+		// Set to true.
+		isDashing = !isPlayerDashing;
+
+		if (transform.parent != null)
+		{
+			Instance.transform.parent = null;
+		}
+
+		// Disable all player's colliders
+		MyBodyCollider2D.enabled = false;
+		myFeetBoxCollider.enabled = false;
+
+		// Freeze Y position to preven falling and jumping.
+		MyRigidbody2D.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
+
+		// Disable the sprite renderer to dispaly a dash form.
+		GetComponent<SpriteRenderer>().enabled = false;
+		dashForm.SetActive(true);
+
+		// Play an animation to set the cinemachine camera.
+		CharacterAnimator.SetBool("Dashing", true);
+
+
+		// Disactivate interface for the time of dashing.
+		GameManager.Instance.InterfaceButtons.SetActive(false);
+
+		// Wait the time of dashing.
+		yield return new WaitForSeconds(dashingTime);
+
+		// Restore the original status.
+
+		GameManager.Instance.InterfaceButtons.SetActive(true);
+		MyBodyCollider2D.enabled = true;
+		myFeetBoxCollider.enabled = true;
+
+		MyRigidbody2D.constraints = RigidbodyConstraints2D.None;
+		MyRigidbody2D.constraints = RigidbodyConstraints2D.FreezeRotation;
+
+		GetComponent<SpriteRenderer>().enabled = true;
+		dashForm.SetActive(false);
+		CharacterAnimator.SetBool("Dashing", false);
+
+		// Set to false.
+		isDashing = isPlayerDashing;
+
 	}
 
 }

@@ -26,18 +26,24 @@ public class GameManager : MonoBehaviour
 	public GameObject InterfaceButtons { get => interfaceButtons; set => interfaceButtons = value; }
 
 	[SerializeField]
-	private GameObject [] treasureSlots = new GameObject[3];
-
-	[SerializeField]
-	private List<GameObject> collectablesPrefab = null;
-
-	[SerializeField]
 	private Button videoGoldButton = null;
 	public Button VideoGoldButton { get => videoGoldButton; set => videoGoldButton = value; }
 
 	[SerializeField]
 	private Button videoLifeButton = null;
 	public Button VideoLifeButton { get => videoLifeButton; set => videoLifeButton = value; }
+
+	[SerializeField]
+	private GameObject signCanvas = null;
+
+	[SerializeField]
+	private TextMeshProUGUI textInfoText = null;
+
+	[SerializeField]
+	private GameObject [] treasureSlots = new GameObject[3];
+
+	[SerializeField]
+	private List<GameObject> collectablesPrefab = null;
 
 	[SerializeField]
 	private Image[] bombImages = null;
@@ -75,6 +81,8 @@ public class GameManager : MonoBehaviour
 
 	// Number of items from the treasure
 	private int numberOfItems = 3;
+
+	private Vector3 objectPosition = Vector3.zero;
 
 	public enum Reward
 	{
@@ -170,6 +178,8 @@ public class GameManager : MonoBehaviour
 		if (PlayerLives > 1)
 		{
 			TakeLife();
+			treasureCanvas.SetActive(false);
+			signCanvas.SetActive(false);
 		}
 		else
 		{
@@ -244,6 +254,11 @@ public class GameManager : MonoBehaviour
 		PlayerCharacter.Instance.Attack();
 	}
 
+	public void OnDashButtonPress()
+	{
+		PlayerCharacter.Instance.Dash();
+	}
+
 	public void SetUI(ref Image [] images, int numberImages, int maxNumberImages)
 	{
 		for (int i = 0; i < maxNumberImages; i++)
@@ -282,10 +297,36 @@ public class GameManager : MonoBehaviour
 			treasureSlots[i].GetComponent<Image>().sprite = randomItems[i].GetComponent<SpriteRenderer>().sprite;
 			treasureSlots[i].GetComponentInChildren<TextMeshProUGUI>().text = " X " + multiplayers[i];
 
-			randomItems[i].GetComponent<Collectibles>().InvokeOnCollectibleHit(multiplayers[i]);
+			randomItems[i].AddComponent<Rigidbody2D>();
+			randomItems[i].GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+			randomItems[i].GetComponent<Rigidbody2D>().isKinematic = false;
+			randomItems[i].GetComponent<Rigidbody2D>().collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+
+			// Instantiate item at the current tracked position.
+			for (int j = 0; j < multiplayers[i]; j++)
+			{
+				Instantiate(randomItems[i], objectPosition, Quaternion.identity);
+			}
+
+			//randomItems[i].GetComponent<Collectibles>().InvokeOnCollectibleHit(multiplayers[i]);
+
 		}
 
 		Debug.Log("Display an add!");
+	}
+
+	public void SetPosition(Vector3 _objectPosition)
+	{
+		objectPosition = _objectPosition;
+	}
+
+	public void DisplaySignInfo(TextInfo textInfo)
+	{
+		if (signCanvas != null)
+		{
+			signCanvas.SetActive(true);
+			textInfoText.text = textInfo.GetText();
+		}
 	}
 
 	public void ActiveButton(Button button)

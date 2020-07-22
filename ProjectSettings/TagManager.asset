@@ -46,6 +46,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background Image
+    uniqueID: 2234418705
+    locked: 0
   - name: Background
     uniqueID: 668474471
     locked: 0
@@ -58,24 +61,27 @@ TagManager:
   - name: Enemy
     uniqueID: 1518766019
     locked: 0
-  - name: Water
-    uniqueID: 685343457
-    locked: 0
-  - name: Hazards
-    uniqueID: 3051938509
-    locked: 0
-  - name: Collectibles
-    uniqueID: 3972635717
-    locked: 0
   - name: Moveable
     uniqueID: 4244598371
     locked: 0
   - name: Objects
     uniqueID: 2657409151
     locked: 0
-  - name: Player
-    uniqueID: 3412809001
+  - name: Water
+    uniqueID: 685343457
     locked: 0
   - name: Foreground
     uniqueID: 1486502617
+    locked: 0
+  - name: Collectibles
+    uniqueID: 3972635717
+    locked: 0
+  - name: Player
+    uniqueID: 3412809001
+    locked: 0
+  - name: Hazards
+    uniqueID: 3051938509
+    locked: 0
+  - name: Bridge
+    uniqueID: 4213522307
     locked: 0

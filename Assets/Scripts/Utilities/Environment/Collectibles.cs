@@ -16,9 +16,17 @@ public class Collectibles : MonoBehaviour
 	[SerializeField, Header("Register to know when a collectible item is hit.")]
 	protected OnCollectibleHitEvent onCollectibleHit;
 
+	private void Start()
+	{
+		if (GetComponent<Rigidbody2D>() != null)
+		{
+			GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-500f, 500f), 500f));
+		}
+	}
+
 	private void OnTriggerEnter2D(Collider2D playerCollider)
 	{
-		if (playerCollider.tag == tagType)
+		if (playerCollider.CompareTag(tagType))
 		{
 			if (soundName != "change")
 			{

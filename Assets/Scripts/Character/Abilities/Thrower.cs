@@ -47,6 +47,11 @@ public class Thrower : MonoBehaviour
 			return;
 		}
 
+		if (PlayerCharacter.Instance.IsAlive != true)
+		{
+			return;
+		}
+
 		if (Input.touchCount > 0 && PlayerCharacter.Instance.PlayerVelocity.x == 0)
 		{
 			Touch touch = Input.GetTouch(0);

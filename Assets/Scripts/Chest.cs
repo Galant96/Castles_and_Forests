@@ -11,6 +11,11 @@ public class Chest : Mechanism
 	{
 		if (collision.CompareTag("Player") && GameManager.Instance.NumberOfKeys > 0 && wasOpen != true)
 		{
+			if (collision.gameObject.GetComponent<PlayerCharacter>().IsDashing != false)
+			{
+				return;
+			}
+
 			GameManager gameManager = GameManager.Instance;
 			// Set buttons active
 			gameManager.ActiveButton(gameManager.VideoGoldButton, true);
@@ -18,6 +23,7 @@ public class Chest : Mechanism
 			animator.SetBool("Openning", true);
 			GameManager.Instance.NumberOfKeys -= 1;
 			Debug.Log("Treasure");
+			GameManager.Instance.SetPosition(transform.position); // Set the current tracked position.
 			onMechanismWork.Invoke(wasOpen);
 			wasOpen = true;
 		}

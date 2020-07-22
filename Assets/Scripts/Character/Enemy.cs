@@ -48,7 +48,7 @@ public class Enemy : BaseCharacter
 
 		// Play death animation and sound
 		soundKeeper.PlayRandomWeaponImpactSound();
-		Animator.SetTrigger("Dying");
+		CharacterAnimator.SetTrigger("Dying");
 
 		if (onScore != null)
 		{

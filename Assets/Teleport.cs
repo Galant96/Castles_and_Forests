@@ -4,16 +4,13 @@ using UnityEngine;
 
 public class Teleport : MonoBehaviour
 {
+	[SerializeField]
+	private string soundName = "";
+
 	private bool wasTeleported = false;
 
 	[SerializeField, Header("Register to know, when the teleportation occures.")]
 	OnTeleportationEvent onTeleportation = null;
-
-	// Start is called before the first frame update
-	void Start()
-    {
-
-	}
 
 	protected void OnTriggerEnter2D(Collider2D collision)
 	{
@@ -22,6 +19,8 @@ public class Teleport : MonoBehaviour
 			if (wasTeleported == false)
 			{
 				Debug.Log(collision.tag);
+
+				SoundManager.Instance.PlaySound(soundName);
 
 				onTeleportation.Invoke(collision.gameObject);
 			}
@@ -33,21 +32,14 @@ public class Teleport : MonoBehaviour
 		wasTeleported = false;
 	}
 
-	public void PlayerTeleport(GameObject teleportedObject)
+	public void ObjectTeleport(GameObject teleportedObject)
 	{
 		Debug.Log(teleportedObject);
 
 		wasTeleported = true;
 		teleportedObject.transform.position = transform.position;
 		// Reset the virtual cameras.
-		GameplayCamera.Instance.SetCameras(PlayerCharacter.Instance.gameObject);
+		//GameplayCamera.Instance.SetCameras(PlayerCharacter.Instance.gameObject);
 	}
 
-	
-
-	// Update is called once per frame
-	void Update()
-    {
-        
-    }
 }

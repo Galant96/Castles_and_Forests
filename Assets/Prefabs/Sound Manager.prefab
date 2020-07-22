@@ -204,3 +204,123 @@ MonoBehaviour:
     volume: 0.414
     pitch: 1
     loop: 0
+  - soundName: Coin
+    clip: {fileID: 8300000, guid: 7ca167b49a8547b42a3bee943ba28b3f, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Ring
+    clip: {fileID: 8300000, guid: d1bbe7bfb35b79f4da709a2be7384877, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Crown
+    clip: {fileID: 8300000, guid: 3a412dab304b79641a808cb1ec2a16d4, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Gem 1
+    clip: {fileID: 8300000, guid: 214bc2c61cf4a9d4db56e4807d072a88, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Gem 2
+    clip: {fileID: 8300000, guid: c2557d1f0d6ceaa4c90430b6d025d8e1, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Gem 3
+    clip: {fileID: 8300000, guid: ee7f6eeaef47da54188d0a1f41640aa5, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Gem 4
+    clip: {fileID: 8300000, guid: 9118a45c3d2f09d46868740cac0bb66d, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Star
+    clip: {fileID: 8300000, guid: f93b49362e9a9ff4f83146927570255e, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Key
+    clip: {fileID: 8300000, guid: 13bb737a16ae67e479b8ac86ba004a77, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Bomb
+    clip: {fileID: 8300000, guid: 34d68b26e1e31254697cda26e45a8fce, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Explosion
+    clip: {fileID: 8300000, guid: 4c9f00b5fca7cbe45bb3488e35a4a7e1, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Fuse
+    clip: {fileID: 8300000, guid: 2befdf3f31815154fadd3200fd4f234c, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Plate On
+    clip: {fileID: 8300000, guid: efd7a89cf5dcb7f4d83002a0dd9d1643, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Plate Off
+    clip: {fileID: 8300000, guid: 39929b44f6663994fa77ee71fa3cf5b2, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Door Open
+    clip: {fileID: 8300000, guid: 41ec46bed5c3e344eb1f407428756209, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Door Close
+    clip: {fileID: 8300000, guid: 3cb9b294a76ffb345b5c66b6d569ad46, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Music
+    clip: {fileID: 8300000, guid: 8074aa13485b7364b927383192ec6381, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 1
+  - soundName: Lever Up
+    clip: {fileID: 8300000, guid: e6fce83e2b9731646bf3e4ce59331b7b, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Lever Down
+    clip: {fileID: 8300000, guid: ecd7d9075ea1b1349a1a026d00dc4e46, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Chest Open
+    clip: {fileID: 8300000, guid: ac804f1a608839d4d8d96d0344b999b4, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Chest Close
+    clip: {fileID: 8300000, guid: 1a449398213c4b8498a108f6c8281729, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Teleport
+    clip: {fileID: 8300000, guid: 0bb9f6f747a734eb8b604ebed3c49af2, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Teleport 1
+    clip: {fileID: 8300000, guid: bba3dbbecdecb454baf8a527d093cc95, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Teleport 2
+    clip: {fileID: 8300000, guid: 6056f26324a344bac93e1a727d975947, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0

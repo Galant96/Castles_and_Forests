@@ -18,3 +18,6 @@ public class OnMechanismEvent : UnityEvent<bool> { };
 
 [System.Serializable]
 public class OnTeleportationEvent : UnityEvent<GameObject> { };
+
+[System.Serializable]
+public class OnCharacterSpawn : UnityEvent<GameObject> { };
