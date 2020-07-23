@@ -8,6 +8,11 @@ public class UnityMonetizationHandler : MonoBehaviour, IUnityAdsListener
 	private bool TestMode = true;
 	private GameManager gameManager = null;
 
+	[SerializeField]
+	private int minRewardNumber = 1;
+	[SerializeField]
+	private int maxRewardNumber = 10;
+
 	// Start is called before the first frame update
 	void Start()
     {
@@ -28,7 +33,7 @@ public class UnityMonetizationHandler : MonoBehaviour, IUnityAdsListener
 			switch (gameManager.RewardType)
 			{
 				case GameManager.Reward.treasure:
-					gameManager.GetTreasure(true);
+					gameManager.GetTreasure(true, gameManager.ObjectInstantiationPos, minRewardNumber, maxRewardNumber);
 					break;
 				case GameManager.Reward.health:
 					gameManager.PlayerLives = gameManager.MaxNumberOfLives;

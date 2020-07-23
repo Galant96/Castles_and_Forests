@@ -124,6 +124,7 @@ public class PlayerCharacter : BaseCharacter
 		{
 			if (weapon.enabled != true)
 			{
+				isDashing = false;
 				EnableWeapon(true);
 			}
 
@@ -184,7 +185,7 @@ public class PlayerCharacter : BaseCharacter
 	private void Climb()
 	{
 		// Check if the player is climbing
-		if (!myFeetBoxCollider.IsTouchingLayers(LayerMask.GetMask("Climbing")))
+		if (!MyBodyCollider2D.IsTouchingLayers(LayerMask.GetMask("Climbing")))
 		{
 			return;
 		}
@@ -309,27 +310,30 @@ public class PlayerCharacter : BaseCharacter
 			Instance.transform.parent = null;
 		}
 
-		// Disable all player's colliders
-		MyBodyCollider2D.enabled = false;
-		myFeetBoxCollider.enabled = false;
+		if (isDashing != false)
+		{
+			// Disable all player's colliders
+			MyBodyCollider2D.enabled = false;
+			myFeetBoxCollider.enabled = false;
 
-		// Freeze Y position to preven falling and jumping.
-		MyRigidbody2D.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
+			// Freeze Y position to preven falling and jumping.
+			MyRigidbody2D.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
 
-		// Disable the sprite renderer to dispaly a dash form.
-		GetComponent<SpriteRenderer>().enabled = false;
-		dashForm.SetActive(true);
+			// Disable the sprite renderer to dispaly a dash form.
+			GetComponent<SpriteRenderer>().enabled = false;
+			dashForm.SetActive(true);
 
-		// Play an animation to set the cinemachine camera.
-		CharacterAnimator.SetBool("Dashing", true);
+			// Play an animation to set the cinemachine camera.
+			CharacterAnimator.SetBool("Dashing", true);
 
 
-		// Disactivate interface for the time of dashing.
-		GameManager.Instance.InterfaceButtons.SetActive(false);
+			// Disactivate interface for the time of dashing.
+			GameManager.Instance.InterfaceButtons.SetActive(false);
 
-		// Wait the time of dashing.
-		yield return new WaitForSeconds(dashingTime);
-
+			// Wait the time of dashing.
+			yield return new WaitForSeconds(dashingTime);
+		}
+		
 		// Restore the original status.
 
 		GameManager.Instance.InterfaceButtons.SetActive(true);

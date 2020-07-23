@@ -1,0 +1,336 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6642966051453995163
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6642966051453995165}
+  - component: {fileID: 6642966051453995164}
+  m_Layer: 0
+  m_Name: Sound Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6642966051453995165
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6642966051453995163}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6642966051453995164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6642966051453995163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d19a08928dc75142b2e89fb397678b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - soundName: Potion1
+    clip: {fileID: 8300000, guid: 9036f0fb0e2e70544ac8b718e1931b30, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - soundName: Potion2
+    clip: {fileID: 8300000, guid: 964ccb4fb3963ab48ae48ad82193f3d3, type: 3}
+    volume: 0.474
+    pitch: 1
+    loop: 0
+  - soundName: Potion3
+    clip: {fileID: 8300000, guid: c69f2da454a15a0449b6b11756fce883, type: 3}
+    volume: 0.474
+    pitch: 1
+    loop: 0
+  - soundName: Potion4
+    clip: {fileID: 8300000, guid: 103767f16fb224d488981babe6157081, type: 3}
+    volume: 0.474
+    pitch: 1
+    loop: 0
+  - soundName: Potion5
+    clip: {fileID: 8300000, guid: 61c7a9fea3c933346aff6af0f9e3c9ab, type: 3}
+    volume: 0.474
+    pitch: 1
+    loop: 0
+  - soundName: Potion6
+    clip: {fileID: 8300000, guid: d091dad7544fdd848854a0804f7faf12, type: 3}
+    volume: 0.474
+    pitch: 1
+    loop: 0
+  - soundName: PlayerStep1
+    clip: {fileID: 8300000, guid: 5bcd95141093f4692b702d6fdd742136, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+  - soundName: PlayerStep2
+    clip: {fileID: 8300000, guid: e22c8045fbeab4ea296430aba8982229, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+  - soundName: PlayerStep3
+    clip: {fileID: 8300000, guid: b9200c52e426d4754baaa1839a241431, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+  - soundName: PlayerAttack1
+    clip: {fileID: 8300000, guid: be525cf3aec6e8c41b13bb8eb37627d9, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+  - soundName: PlayerAttack2
+    clip: {fileID: 8300000, guid: b5370cb4bdd7a33418c932e492b091d6, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+  - soundName: PlayerAttack3
+    clip: {fileID: 8300000, guid: 7f8a4c00ee9ca34478463b01f6d8e5cc, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+  - soundName: Jump1
+    clip: {fileID: 8300000, guid: daaf079a9320ec048aadb71e196fd4de, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+  - soundName: Campfire
+    clip: {fileID: 8300000, guid: 7861444994f2619448adc874524711dd, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+  - soundName: Furnace
+    clip: {fileID: 8300000, guid: dd69a85c983d04be58f2cea12dc44d08, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+  - soundName: Torch1
+    clip: {fileID: 8300000, guid: 1e7f9d32de3542d4684ba16d78b0c682, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+  - soundName: Torch2
+    clip: {fileID: 8300000, guid: 2654c9946d79e8a45b9cbcfe593bed7d, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+  - soundName: Land1
+    clip: {fileID: 8300000, guid: 28ed8f7c0bce8f44db87c48b58ff816c, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+  - soundName: Flag
+    clip: {fileID: 8300000, guid: 1610da6c742dc264a86d044118428051, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+  - soundName: Chain
+    clip: {fileID: 8300000, guid: 75990e5699bb93246aabafcb2866e64f, type: 3}
+    volume: 0.45
+    pitch: 1
+    loop: 1
+  - soundName: Metal Column Trap
+    clip: {fileID: 8300000, guid: 1baa97de9fbe0d54bb209311398dd9c8, type: 3}
+    volume: 0.45
+    pitch: 1
+    loop: 1
+  - soundName: Stream
+    clip: {fileID: 8300000, guid: 1a36e2f20f07fd94090e4685d2351645, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 1
+  - soundName: Log Mechanism
+    clip: {fileID: 8300000, guid: 0d45bb6a3c36ad1418f23ce2dab15f17, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 1
+  - soundName: Creak
+    clip: {fileID: 8300000, guid: 3846e0f632e05f346b36d2d6858d6bc9, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 1
+  - soundName: Splash
+    clip: {fileID: 8300000, guid: 78326e4ab9833ec46900854a9887f16d, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Stab
+    clip: {fileID: 8300000, guid: 72641f99219c1f0408c6426bd47b41f5, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Swing Blood 1
+    clip: {fileID: 8300000, guid: 91879fa048281594ab43e38d8cb38380, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Swing Blood 2
+    clip: {fileID: 8300000, guid: 15deb7d2c41f11648ac19a399f2a30e4, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Swing Blood 3
+    clip: {fileID: 8300000, guid: f0380a0c5aadea248ae0c5722438e518, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Swing Blood 4
+    clip: {fileID: 8300000, guid: d075e1050bfd18848b1a441a9329b947, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Swing Blood 5
+    clip: {fileID: 8300000, guid: 2b29564301d334343847ff71a85b3c17, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Swing Blood 6
+    clip: {fileID: 8300000, guid: 8c1aaf4ab42aec74faf7b42cfa85a3ca, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Coin
+    clip: {fileID: 8300000, guid: 7ca167b49a8547b42a3bee943ba28b3f, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Ring
+    clip: {fileID: 8300000, guid: d1bbe7bfb35b79f4da709a2be7384877, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Crown
+    clip: {fileID: 8300000, guid: 3a412dab304b79641a808cb1ec2a16d4, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Gem 1
+    clip: {fileID: 8300000, guid: 214bc2c61cf4a9d4db56e4807d072a88, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Gem 2
+    clip: {fileID: 8300000, guid: c2557d1f0d6ceaa4c90430b6d025d8e1, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Gem 3
+    clip: {fileID: 8300000, guid: ee7f6eeaef47da54188d0a1f41640aa5, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Gem 4
+    clip: {fileID: 8300000, guid: 9118a45c3d2f09d46868740cac0bb66d, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Star
+    clip: {fileID: 8300000, guid: f93b49362e9a9ff4f83146927570255e, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Key
+    clip: {fileID: 8300000, guid: 13bb737a16ae67e479b8ac86ba004a77, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Bomb
+    clip: {fileID: 8300000, guid: 34d68b26e1e31254697cda26e45a8fce, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Explosion
+    clip: {fileID: 8300000, guid: 4c9f00b5fca7cbe45bb3488e35a4a7e1, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Fuse
+    clip: {fileID: 8300000, guid: 2befdf3f31815154fadd3200fd4f234c, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Plate On
+    clip: {fileID: 8300000, guid: efd7a89cf5dcb7f4d83002a0dd9d1643, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Plate Off
+    clip: {fileID: 8300000, guid: 39929b44f6663994fa77ee71fa3cf5b2, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Door Open
+    clip: {fileID: 8300000, guid: 41ec46bed5c3e344eb1f407428756209, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Door Close
+    clip: {fileID: 8300000, guid: 3cb9b294a76ffb345b5c66b6d569ad46, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Music
+    clip: {fileID: 8300000, guid: 8074aa13485b7364b927383192ec6381, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 1
+  - soundName: Lever Up
+    clip: {fileID: 8300000, guid: e6fce83e2b9731646bf3e4ce59331b7b, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Lever Down
+    clip: {fileID: 8300000, guid: ecd7d9075ea1b1349a1a026d00dc4e46, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Chest Open
+    clip: {fileID: 8300000, guid: ac804f1a608839d4d8d96d0344b999b4, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Chest Close
+    clip: {fileID: 8300000, guid: 1a449398213c4b8498a108f6c8281729, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Teleport
+    clip: {fileID: 8300000, guid: 0bb9f6f747a734eb8b604ebed3c49af2, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Pot
+    clip: {fileID: 8300000, guid: 8df2173034964ef4c87451b566a8dd83, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Collectables
+    clip: {fileID: 8300000, guid: 6ddb25fe577eca349b49b8e772c719be, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Barrel
+    clip: {fileID: 8300000, guid: e880790402b47ce46a1b81c6f272f526, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+  - soundName: Button
+    clip: {fileID: 8300000, guid: 78bec7e467957cb4aa55f0c7b709e11e, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0

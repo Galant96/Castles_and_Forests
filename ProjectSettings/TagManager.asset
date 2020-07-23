@@ -58,10 +58,7 @@ TagManager:
   - name: Climbing
     uniqueID: 700475081
     locked: 0
-  - name: Enemy
-    uniqueID: 1518766019
-    locked: 0
-  - name: Moveable
+  - name: Movable
     uniqueID: 4244598371
     locked: 0
   - name: Objects
@@ -75,6 +72,9 @@ TagManager:
     locked: 0
   - name: Collectibles
     uniqueID: 3972635717
+    locked: 0
+  - name: Enemy
+    uniqueID: 1518766019
     locked: 0
   - name: Player
     uniqueID: 3412809001

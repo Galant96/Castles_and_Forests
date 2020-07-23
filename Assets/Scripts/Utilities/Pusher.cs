@@ -78,7 +78,7 @@ public class Pusher : MonoBehaviour
 		}
 	}
 
-	private void Update()
+	private void FixedUpdate()
 	{
 		if (pusherCollider != null)
 		{

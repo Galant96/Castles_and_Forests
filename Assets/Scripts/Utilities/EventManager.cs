@@ -17,7 +17,12 @@ public class OnThrowEvent : UnityEvent<Vector2> { };
 public class OnMechanismEvent : UnityEvent<bool> { };
 
 [System.Serializable]
+public class OnGetReward : UnityEvent<bool, Vector3, int, int> { };
+
+[System.Serializable]
 public class OnTeleportationEvent : UnityEvent<GameObject> { };
 
 [System.Serializable]
 public class OnCharacterSpawn : UnityEvent<GameObject> { };
+
+

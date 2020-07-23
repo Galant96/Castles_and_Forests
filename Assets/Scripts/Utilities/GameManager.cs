@@ -79,10 +79,11 @@ public class GameManager : MonoBehaviour
 	public float Time { get; private set; } = 0f;
 	public int Score { get; set; } = 0;
 
+	private Vector3 objectInstantiationPos = Vector3.zero;
+	public Vector3 ObjectInstantiationPos { get => objectInstantiationPos; set => objectInstantiationPos = value; }
+
 	// Number of items from the treasure
 	private int numberOfItems = 3;
-
-	private Vector3 objectPosition = Vector3.zero;
 
 	public enum Reward
 	{
@@ -274,7 +275,7 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
-	public void GetTreasure(bool chestWasOpened)
+	public void GetTreasure(bool chestWasOpened, Vector3 chestPosition, int minRewardNumber, int maxRewardNumber)
 	{
 		if (chestWasOpened != true)
 		{
@@ -282,42 +283,45 @@ public class GameManager : MonoBehaviour
 		}
 
 		treasureCanvas.SetActive(true);
+		InstantiateCollectables(true, chestPosition, minRewardNumber, maxRewardNumber);
+	}
+
+	public void InstantiateCollectables(bool isInstantiate, Vector3 instantiationPosition, int minRewardNumber, int maxRewardNumber)
+	{
+		if (isInstantiate != true)
+		{
+			return;
+		}
+
+		objectInstantiationPos = instantiationPosition;
 
 		GameObject[] randomItems = new GameObject[numberOfItems];
 		int[] multiplayers = new int[numberOfItems];
 
-
-		// Get random items from the treasure.
+				// Get random items from the treasure.
 		for (int i = 0; i < randomItems.Length; i++)
 		{
-			randomItems[i] = collectablesPrefab[Random.Range(0, collectablesPrefab.Count-1)];
-			multiplayers[i] = Random.Range(1, 10);
+			randomItems[i] = collectablesPrefab[Random.Range(0, collectablesPrefab.Count - 1)];
+			multiplayers[i] = Random.Range(minRewardNumber, maxRewardNumber);
 
-			Debug.Log(multiplayers[i]);
-			treasureSlots[i].GetComponent<Image>().sprite = randomItems[i].GetComponent<SpriteRenderer>().sprite;
-			treasureSlots[i].GetComponentInChildren<TextMeshProUGUI>().text = " X " + multiplayers[i];
-
-			randomItems[i].AddComponent<Rigidbody2D>();
-			randomItems[i].GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
-			randomItems[i].GetComponent<Rigidbody2D>().isKinematic = false;
-			randomItems[i].GetComponent<Rigidbody2D>().collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+			if (treasureCanvas.activeInHierarchy != false)
+			{
+				treasureSlots[i].GetComponent<Image>().sprite = randomItems[i].GetComponent<SpriteRenderer>().sprite;
+				treasureSlots[i].GetComponentInChildren<TextMeshProUGUI>().text = " X " + multiplayers[i];
+			}
 
 			// Instantiate item at the current tracked position.
 			for (int j = 0; j < multiplayers[i]; j++)
 			{
-				Instantiate(randomItems[i], objectPosition, Quaternion.identity);
+				GameObject collectable = Instantiate(randomItems[i], instantiationPosition, Quaternion.identity) as GameObject;
+				collectable.AddComponent<Rigidbody2D>();
+				collectable.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+				collectable.GetComponent<Rigidbody2D>().isKinematic = false;
+				collectable.GetComponent<Rigidbody2D>().collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+				SoundManager.Instance.PlaySound("Collectables");
 			}
 
-			//randomItems[i].GetComponent<Collectibles>().InvokeOnCollectibleHit(multiplayers[i]);
-
 		}
-
-		Debug.Log("Display an add!");
-	}
-
-	public void SetPosition(Vector3 _objectPosition)
-	{
-		objectPosition = _objectPosition;
 	}
 
 	public void DisplaySignInfo(TextInfo textInfo)
