@@ -45,6 +45,16 @@ public class GameManager : MonoBehaviour
 	[SerializeField]
 	private List<GameObject> collectablesPrefab = null;
 
+	// Pause Canvas
+	[SerializeField]
+	private GameObject pauseCanvas = null;
+
+	[SerializeField]
+	private GameObject playButton = null;
+
+	[SerializeField]
+	private GameObject pauseButton = null;
+	//
 	[SerializeField]
 	private Image[] bombImages = null;
 	[SerializeField]
@@ -76,7 +86,7 @@ public class GameManager : MonoBehaviour
 	private int maxNumberOfKeys = 0;
 	public int MaxNumberOfKeys { get { return maxNumberOfKeys; } private set { maxNumberOfKeys = value; } }
 
-	public float Time { get; private set; } = 0f;
+	public float GameTime { get; private set; } = 0f;
 	public int Score { get; set; } = 0;
 
 	private Vector3 objectInstantiationPos = Vector3.zero;
@@ -120,6 +130,8 @@ public class GameManager : MonoBehaviour
 	{
 		// Set the selector panle disactive.
 		treasureCanvas.SetActive(false);
+		pauseCanvas.SetActive(false);
+		playButton.SetActive(false);
 		music.AudioSource.Play();
 	}
 
@@ -220,9 +232,9 @@ public class GameManager : MonoBehaviour
 		if (timeText != null)
 		{
 			// Get time from the system
-			Time += UnityEngine.Time.deltaTime;
+			GameTime += UnityEngine.Time.deltaTime;
 
-			int minutesInt = (int)(Time / 60);
+			int minutesInt = (int)(GameTime / 60);
 			string minutes = (minutesInt.ToString());
 
 			if (minutesInt < 10)
@@ -230,7 +242,7 @@ public class GameManager : MonoBehaviour
 				minutes = "0" + minutes;
 			}
 
-			int secondsInt = (int)(Mathf.Round(Time % 60));
+			int secondsInt = (int)(Mathf.Round(GameTime % 60));
 			string seconds = secondsInt.ToString();
 
 			if (secondsInt < 10)
@@ -346,5 +358,26 @@ public class GameManager : MonoBehaviour
 	public void ExitCanvas(GameObject canvas)
 	{
 		canvas.SetActive(false);
+	}
+
+	public void PauseGame(int timeScale)
+	{
+		if (timeScale == 0)
+		{
+			Time.timeScale = timeScale;
+
+			pauseButton.SetActive(false);
+			playButton.SetActive(true);
+			pauseCanvas.SetActive(true);
+		}
+		else if (timeScale == 1)
+		{
+			Time.timeScale = timeScale;
+
+			pauseButton.SetActive(true);
+			playButton.SetActive(false);
+			pauseCanvas.SetActive(false);
+		}
+
 	}
 }
