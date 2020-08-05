@@ -19,6 +19,9 @@ public class PlayerCharacter : BaseCharacter
 	[SerializeField]
 	float dashingTime = 1f;
 
+	float controlThrow = 0f;
+	public float ControlThrow { get => controlThrow; set => controlThrow = value; }
+
 	private Vector2 playerVelocity;
 	public Vector2 PlayerVelocity { get => playerVelocity; set => playerVelocity = value; }
 
@@ -48,6 +51,7 @@ public class PlayerCharacter : BaseCharacter
 	}
 
 
+
 	// Events
 	[SerializeField, Header("Register to know if character is spawned.")]
 	OnCharacterSpawn onCharacterSpawn = null;
@@ -66,6 +70,8 @@ public class PlayerCharacter : BaseCharacter
 		weapon = GetComponentInChildren<CircleCollider2D>();
 
 		flippingSite = FlippingSite.right;
+
+		ControlThrow = Mathf.Clamp(0f, -1f, 1f);
 	}
 
 	// Update is called once per frame
@@ -100,9 +106,11 @@ public class PlayerCharacter : BaseCharacter
 		Die();
 		Move();
 		FlipSprite();
-		Jump();
+		//Jump();
 		Climb();
 		// Attack(); // Set to button control
+
+		GroundPlayer();
 	}
 
 	protected override void FlipSprite()
@@ -171,12 +179,12 @@ public class PlayerCharacter : BaseCharacter
 	public override void Move()
 	{
 		
-		float controlThrow = joystick.Horizontal; // Value is between -1 to +1
+		//float controlThrow = joystick.Horizontal; // Value is between -1 to +1
 
 		playerVelocity = new Vector2(controlThrow * Speed, MyRigidbody2D.velocity.y);
 		MyRigidbody2D.velocity = playerVelocity;
 
-		// Set true if character is moving
+		//// Set true if character is moving
 		bool isHorizontalSpeed = Mathf.Abs(MyRigidbody2D.velocity.x) > Mathf.Epsilon;
 		CharacterAnimator.SetBool("Running", isHorizontalSpeed);
 
@@ -190,57 +198,45 @@ public class PlayerCharacter : BaseCharacter
 			return;
 		}
 
-		float controlThrow = 1f;
+		float controlThrowVertical = 1f;
 
-		if (controlThrow > 0)
+		if (controlThrowVertical > 0)
 		{
-			Vector2 climbVelocity = new Vector2(MyRigidbody2D.velocity.x, controlThrow * climbSpeed);
+			Vector2 climbVelocity = new Vector2(MyRigidbody2D.velocity.x, controlThrowVertical * climbSpeed);
 			MyRigidbody2D.velocity = climbVelocity;
 		}
 
 	}
 
-	private void Jump()
+	public void Jump()
 	{
 		// Check if the player is grounded to prevent a double jump
-		if (!myFeetBoxCollider.IsTouchingLayers(LayerMask.GetMask("Ground", "Objects")))
+		if (myFeetBoxCollider.IsTouchingLayers(LayerMask.GetMask("Ground", "Objects")))
 		{
-			bool playerHasVerticalSpeed = MyRigidbody2D.velocity.y > 0;
-
-			if (playerHasVerticalSpeed)
-			{
-
-				CharacterAnimator.SetBool("Jumping", true);
-				CharacterAnimator.SetBool("Falling", false);
-				CharacterAnimator.SetBool("Running", false);
-			}
-			else
-			{
-				CharacterAnimator.SetBool("Jumping", false);
-				CharacterAnimator.SetBool("Falling", true);
-				CharacterAnimator.SetBool("Running", false);
-			}
-
-			return;
-		}
-		else
-		{
-			CharacterAnimator.SetBool("Jumping", false);
+			CharacterAnimator.SetBool("Jumping", true);
 			CharacterAnimator.SetBool("Falling", false);
-		}
 
-		float verticalMovement = joystick.Vertical;
-
-		if (verticalMovement >= 0.5f)
-		{
 			Vector2 jumpVelocity = new Vector2(0f, jumpSpeed);
 			MyRigidbody2D.velocity = jumpVelocity;
 		}
 	}
 
-	public void PauseJumping()
+	/// <summary>
+	///  Check if the player character is grounded or it is not and set an appropriate animation.
+	/// </summary>
+	private void GroundPlayer()
 	{
-		CharacterAnimator.enabled = false;
+		if (!myFeetBoxCollider.IsTouchingLayers(LayerMask.GetMask("Ground", "Objects")))
+		{
+			CharacterAnimator.SetBool("Falling", true);
+		}
+		else
+		{
+			CharacterAnimator.SetBool("Falling", false);
+		}
+
+		CharacterAnimator.SetBool("Jumping", false);
+
 	}
 
 	// Restore player's life on the potion collision

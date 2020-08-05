@@ -380,4 +380,26 @@ public class GameManager : MonoBehaviour
 		}
 
 	}
+
+	public void IsPlayerMoveDirectionRight(bool isTrue)
+	{
+		if (isTrue != false)
+		{
+			PlayerCharacter.Instance.ControlThrow = 1f;
+		}
+		else if (isTrue != true)
+		{
+			PlayerCharacter.Instance.ControlThrow = -1f;
+		}
+	}
+
+	public void StopPlayer()
+	{
+		PlayerCharacter.Instance.ControlThrow = 0f;
+	}
+
+	public void PlayerJump()
+	{
+		PlayerCharacter.Instance.Jump();
+	}
 }
