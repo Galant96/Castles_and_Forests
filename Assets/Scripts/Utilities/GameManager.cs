@@ -22,18 +22,6 @@ public class GameManager : MonoBehaviour
 	private GameObject treasureCanvas = null;
 
 	[SerializeField]
-	private GameObject interfaceButtons = null;
-	public GameObject InterfaceButtons { get => interfaceButtons; set => interfaceButtons = value; }
-
-	[SerializeField]
-	private Button videoGoldButton = null;
-	public Button VideoGoldButton { get => videoGoldButton; set => videoGoldButton = value; }
-
-	[SerializeField]
-	private Button videoLifeButton = null;
-	public Button VideoLifeButton { get => videoLifeButton; set => videoLifeButton = value; }
-
-	[SerializeField]
 	private GameObject signCanvas = null;
 
 	[SerializeField]
@@ -54,6 +42,19 @@ public class GameManager : MonoBehaviour
 
 	[SerializeField]
 	private GameObject pauseButton = null;
+
+	// Main Menu Canvas
+	[SerializeField]
+	private GameObject mainMenuCanvas = null;
+	public GameObject MainMenuCanvas { get => mainMenuCanvas; set => mainMenuCanvas = value; }
+
+	[SerializeField]
+	private GameObject gameCanvas = null;
+
+	[SerializeField]
+	private GameObject optionsCanvas = null;
+	public GameObject OptionsCanvas { get => optionsCanvas; set => optionsCanvas = value; }
+
 	//
 	[SerializeField]
 	private Image[] bombImages = null;
@@ -62,9 +63,31 @@ public class GameManager : MonoBehaviour
 	[SerializeField]
 	private Image[] keyImages = null;
 
+	[SerializeField]
+	private GameObject interfaceButtons = null;
+	public GameObject InterfaceButtons { get => interfaceButtons; set => interfaceButtons = value; }
+
+	[SerializeField]
+	private Button videoGoldButton = null;
+	public Button VideoGoldButton { get => videoGoldButton; set => videoGoldButton = value; }
+
+	[SerializeField]
+	private Button videoLifeButton = null;
+	public Button VideoLifeButton { get => videoLifeButton; set => videoLifeButton = value; }
+
+	// Option in games
+	[SerializeField]
+	private Slider volumeMusicSliderMainController = null; // Volume
+	public Slider VolumeMusicSliderMainController { get => volumeMusicSliderMainController; set => volumeMusicSliderMainController = value; }
+
+	// Option in games
+	[SerializeField]
+	private Slider volumeSoundSliderMainController = null; // Volume
+	public Slider VolumeSoundSliderMainController { get => volumeMusicSliderMainController; set => volumeMusicSliderMainController = value; }
+
 	// Music
 	[SerializeField]
-	private string mainMusicTitle = "change";
+	private string mainMusicTitle = "Music";
 	private Sound music = null;
 
 	// Configs
@@ -123,7 +146,6 @@ public class GameManager : MonoBehaviour
 		maxNumberOfLives = lifeImages.Length;
 		maxNumberOfKeys = keyImages.Length;
 
-		music = SoundManager.Instance.GetSound(mainMusicTitle);
 	}
 
 	private void Start()
@@ -132,7 +154,10 @@ public class GameManager : MonoBehaviour
 		treasureCanvas.SetActive(false);
 		pauseCanvas.SetActive(false);
 		playButton.SetActive(false);
+
+		music = SoundManager.Instance.GetMusic();
 		music.AudioSource.Play();
+
 	}
 
 	private void SetUpSingelton()
@@ -158,17 +183,27 @@ public class GameManager : MonoBehaviour
 			levelLoader = GetComponentInChildren<LevelLoader>();
 		}
 
-		checkMaxNumberOfPlayersStats();
+		CheckMaxNumberOfPlayersStats();
 
 		// Manage UI
 		DisplayScore();
-		DisplayTime();
+
+		if (PlayerCharacter.Instance.isActiveAndEnabled)
+		{
+			DisplayTime();
+		}
+		else
+		{
+			GameTime = 0f;
+			DisplayTime();
+		}
+
 		SetUI(ref bombImages, numberOfBombs, maxNumberOfBombs);
 		SetUI(ref lifeImages, playerLives, maxNumberOfLives);
 		SetUI(ref keyImages, numberOfKeys, maxNumberOfKeys);
 	}
 
-	private void checkMaxNumberOfPlayersStats()
+	private void CheckMaxNumberOfPlayersStats()
 	{
 		if (playerLives > maxNumberOfLives)
 		{
@@ -360,6 +395,11 @@ public class GameManager : MonoBehaviour
 		canvas.SetActive(false);
 	}
 
+	public void ActiveCanvas(GameObject canvas)
+	{
+		canvas.SetActive(true);
+	}
+
 	public void PauseGame(int timeScale)
 	{
 		if (timeScale == 0)
@@ -401,5 +441,26 @@ public class GameManager : MonoBehaviour
 	public void PlayerJump()
 	{
 		PlayerCharacter.Instance.Jump();
+	}
+
+	// TO DO CHANGE TO ACTIVE CANVAS OR EXIT CANVAS
+	public void EnableGameCanvas (bool isActive)
+	{
+		gameCanvas.SetActive(isActive);
+	}
+
+	public void EnableMainMenuCanvas(bool isActive)
+	{
+		mainMenuCanvas.SetActive(isActive);
+	}
+
+	public void SyncOptionsMusicSliders(float syncVolume)
+	{
+		volumeMusicSliderMainController.value = syncVolume;
+	}
+
+	public void SyncOptionsSoundSliders(float syncVolume)
+	{
+		VolumeSoundSliderMainController.value = syncVolume;
 	}
 }

@@ -11,6 +11,8 @@ public class Spawn : MonoBehaviour
 		character = _character;
 		character.transform.position = transform.position;
 		character.SetActive(false);
+		GameManager.Instance.EnableGameCanvas(true);
+
 	}
 
 	public void ActiveSpawnedCharacter()

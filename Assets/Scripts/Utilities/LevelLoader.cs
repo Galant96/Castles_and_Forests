@@ -18,19 +18,21 @@ public class LevelLoader : MonoBehaviour
 		private set { currentSceneIndex = value; }
 	}
 
-	private int previousSceneIndex = 0;
-
 	private void Awake()
 	{
-		CurrentSceneIndex = GetSceneIndex();
+		Instance = this;
+		currentSceneIndex = GetSceneIndex();
 	}
 
 	private void Update()
 	{
-		if (CurrentSceneIndex != GetSceneIndex())
+	
+
+		if (currentSceneIndex != GetSceneIndex())
 		{
-			CurrentSceneIndex = GetSceneIndex();
+			currentSceneIndex = GetSceneIndex();
 		}
+
 	}
 
 	public void LoadNextScene()
@@ -40,7 +42,8 @@ public class LevelLoader : MonoBehaviour
 
 	public void LoadMainMenu()
 	{
-		StartCoroutine(WaitForAnimation("Main Menu"));
+		SceneManager.LoadScene("Main Menu");
+		GameManager.Instance.EnableMainMenuCanvas(true);
 	}
 
 	public void LoadOptions()
@@ -58,16 +61,7 @@ public class LevelLoader : MonoBehaviour
 		return SceneManager.GetActiveScene().buildIndex;
 	}
 
-	public void LoadPreviousScene()
-	{
-		SceneManager.LoadScene(previousSceneIndex);
-	}
 
-
-	public void SavePreviousScene()
-	{
-		previousSceneIndex = GetSceneIndex();
-	}
 
 	public void LoadTheSameSceneAgain()
 	{
@@ -76,7 +70,13 @@ public class LevelLoader : MonoBehaviour
 
 	public void LoadFirstLevel()
 	{
-		StartCoroutine(WaitForAnimation(1));
+		GameManager.Instance.EnableMainMenuCanvas(false);
+		StartCoroutine(WaitForAnimation(2));
+	}
+
+	public void LoadSceneAtIndex(int index)
+	{
+		WaitForAnimation(index);
 	}
 
 	// Untility methods to wait for an animation end

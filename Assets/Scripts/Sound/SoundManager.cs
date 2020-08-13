@@ -8,6 +8,9 @@ public class SoundManager : MonoBehaviour
 	[SerializeField]
 	public List<Sound> sounds = null;
 
+	[SerializeField]
+	public Sound musicSound = null;
+
 	private void Awake()
 	{
 		SetUpSingelton();
@@ -15,18 +18,37 @@ public class SoundManager : MonoBehaviour
 		// Set up sounds
 		foreach (Sound sound in sounds)
 		{
-			sound.AudioSource = gameObject.AddComponent<AudioSource>();
-			sound.AudioSource.clip = sound.Clip;
+			if (sound.SoundName == "Music")
+			{
+				musicSound = sound;
+				sound.AudioSource = gameObject.AddComponent<AudioSource>();
+				sound.AudioSource.clip = sound.Clip;
 
-			sound.AudioSource.volume = sound.Volume;
-			sound.AudioSource.pitch = sound.Pitch;
-			sound.AudioSource.loop = sound.Loop;
+				sound.AudioSource.volume = PlayerPrefsController.GetMasterMusicVolume();
+				sound.AudioSource.pitch = sound.Pitch;
+				sound.AudioSource.loop = sound.Loop;
+			}
+			else
+			{
+				sound.AudioSource = gameObject.AddComponent<AudioSource>();
+				sound.AudioSource.clip = sound.Clip;
+
+				sound.AudioSource.volume = PlayerPrefsController.GetMasterSoundVolume();
+				sound.AudioSource.pitch = sound.Pitch;
+				sound.AudioSource.loop = sound.Loop;
+			}
+			
 		}
 	}
 
 	public Sound GetSound(string name)
 	{
 		return sounds.Find(sounds => sounds.SoundName == name);
+	}
+
+	public Sound GetMusic()
+	{
+		return sounds.Find(sounds => sounds.SoundName == "Music");
 	}
 
 	public void PlaySound(string name)
@@ -70,6 +92,7 @@ public class SoundManager : MonoBehaviour
 			sound.AudioSource.Pause();
 		}
 	}
+
 
 	private void SetUpSingelton()
 	{

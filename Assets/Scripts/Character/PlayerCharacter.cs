@@ -63,6 +63,7 @@ public class PlayerCharacter : BaseCharacter
 		// Spawn character at the spawn point.
 		onCharacterSpawn.Invoke(gameObject);
 
+
 		base.Start();
 		soundKeeper = GetComponent<CharacterSoundKeeper>();
 
@@ -72,6 +73,7 @@ public class PlayerCharacter : BaseCharacter
 		flippingSite = FlippingSite.right;
 
 		ControlThrow = Mathf.Clamp(0f, -1f, 1f);
+
 	}
 
 	// Update is called once per frame
@@ -348,6 +350,15 @@ public class PlayerCharacter : BaseCharacter
 
 	}
 
+	public void GetReward(bool isInstantiate, Vector3 instantiationPosition, int minRewardNumber, int maxRewardNumber)
+	{
+		GameManager.Instance.InstantiateCollectables(isInstantiate, instantiationPosition, minRewardNumber, maxRewardNumber);
+	}
+
+	public void AdvanceToNextLevel()
+	{
+		LevelLoader.Instance.LoadNextScene();
+	}
 }
 
 

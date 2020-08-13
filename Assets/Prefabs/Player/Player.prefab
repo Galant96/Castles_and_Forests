@@ -5139,7 +5139,7 @@ MonoBehaviour:
     type: 3}
   throwPoint: {fileID: 679516867}
   numberOfTrajectoryPoints: 30
-  throwPower: {x: 3, y: 3.5}
+  throwPower: {x: 1.5, y: 3.5}
 --- !u!212 &5845743644274396959
 SpriteRenderer:
   m_ObjectHideFlags: 0
