@@ -50,12 +50,13 @@ public class GameManager : MonoBehaviour
 
 	[SerializeField]
 	private GameObject gameCanvas = null;
+	public GameObject GameCanvas { get => gameCanvas; }
 
 	[SerializeField]
 	private GameObject optionsCanvas = null;
 	public GameObject OptionsCanvas { get => optionsCanvas; set => optionsCanvas = value; }
 
-	//
+	// Images
 	[SerializeField]
 	private Image[] bombImages = null;
 	[SerializeField]
@@ -322,7 +323,7 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
-	public void GetTreasure(bool chestWasOpened, Vector3 chestPosition, int minRewardNumber, int maxRewardNumber)
+	public void OpenTreasure(bool chestWasOpened, Vector3 chestPosition, int minRewardNumber, int maxRewardNumber)
 	{
 		if (chestWasOpened != true)
 		{
@@ -361,14 +362,22 @@ public class GameManager : MonoBehaviour
 			for (int j = 0; j < multiplayers[i]; j++)
 			{
 				GameObject collectable = Instantiate(randomItems[i], instantiationPosition, Quaternion.identity) as GameObject;
+				collectable.GetComponent<BoxCollider2D>().enabled = false;
 				collectable.AddComponent<Rigidbody2D>();
 				collectable.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
 				collectable.GetComponent<Rigidbody2D>().isKinematic = false;
 				collectable.GetComponent<Rigidbody2D>().collisionDetectionMode = CollisionDetectionMode2D.Continuous;
 				SoundManager.Instance.PlaySound("Collectables");
+				StartCoroutine(waitForReward(1f, collectable));
 			}
 
 		}
+	}
+
+	IEnumerator waitForReward(float waitingTime, GameObject reward)
+	{
+		yield return new WaitForSeconds(waitingTime);
+		reward.GetComponent<BoxCollider2D>().enabled = true;
 	}
 
 	public void DisplaySignInfo(TextInfo textInfo)
@@ -461,6 +470,6 @@ public class GameManager : MonoBehaviour
 
 	public void SyncOptionsSoundSliders(float syncVolume)
 	{
-		VolumeSoundSliderMainController.value = syncVolume;
+		volumeSoundSliderMainController.value = syncVolume;
 	}
 }

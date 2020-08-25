@@ -9478,6 +9478,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetDefault
       objectReference: {fileID: 0}
+    - target: {fileID: 6306829294610545439, guid: 989e5f09ad51e88418d2467207f52799,
+        type: 3}
+      propertyPath: m_Value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6124912153300708029, guid: 989e5f09ad51e88418d2467207f52799,
         type: 3}
       propertyPath: m_AnchorMin.x

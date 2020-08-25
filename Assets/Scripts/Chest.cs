@@ -19,6 +19,11 @@ public class Chest : Mechanism
 	{
 		if (collision.CompareTag("Player") && GameManager.Instance.NumberOfKeys > 0 && wasOpen != true)
 		{
+			if (collision == null)
+			{
+				return;
+			}
+
 			if (collision.gameObject.GetComponent<PlayerCharacter>().IsDashing != false)
 			{
 				return;

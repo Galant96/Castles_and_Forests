@@ -33,7 +33,7 @@ public class UnityMonetizationHandler : MonoBehaviour, IUnityAdsListener
 			switch (gameManager.RewardType)
 			{
 				case GameManager.Reward.treasure:
-					gameManager.GetTreasure(true, gameManager.ObjectInstantiationPos, minRewardNumber, maxRewardNumber);
+					gameManager.OpenTreasure(true, gameManager.ObjectInstantiationPos, minRewardNumber, maxRewardNumber);
 					break;
 				case GameManager.Reward.health:
 					gameManager.PlayerLives = gameManager.MaxNumberOfLives;

@@ -8,7 +8,7 @@ public class LevelLoader : MonoBehaviour
 	public static LevelLoader Instance { get; private set; }
 
 	[SerializeField]
-	private float animationTime = 1f;
+	private float animationTime = 0.5f;
 
 	private int currentSceneIndex = 0;
 
@@ -26,8 +26,6 @@ public class LevelLoader : MonoBehaviour
 
 	private void Update()
 	{
-	
-
 		if (currentSceneIndex != GetSceneIndex())
 		{
 			currentSceneIndex = GetSceneIndex();
@@ -94,5 +92,6 @@ public class LevelLoader : MonoBehaviour
 		yield return new WaitForSeconds(animationTime);
 		SceneManager.LoadScene(animationIndex);
 	}
+
 
 }

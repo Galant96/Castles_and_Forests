@@ -130,7 +130,7 @@ public class PlayerCharacter : BaseCharacter
 
 		bool isPlayerStatic = MyRigidbody2D.velocity == Vector2.zero;
 
-		if (isPlayerStatic)
+		if (isPlayerStatic == true)
 		{
 			if (weapon.enabled != true)
 			{
@@ -355,10 +355,16 @@ public class PlayerCharacter : BaseCharacter
 		GameManager.Instance.InstantiateCollectables(isInstantiate, instantiationPosition, minRewardNumber, maxRewardNumber);
 	}
 
+	public void GetTreasure(bool chestWasOpened, Vector3 chestPosition, int minRewardNumber, int maxRewardNumber)
+	{
+		GameManager.Instance.OpenTreasure(chestWasOpened, chestPosition, minRewardNumber, maxRewardNumber);
+	}
+
 	public void AdvanceToNextLevel()
 	{
 		LevelLoader.Instance.LoadNextScene();
 	}
+
 }
 
 

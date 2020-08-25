@@ -8,7 +8,6 @@ public class OptionsController : MonoBehaviour
 	[SerializeField]
 	private Slider soundSlider = null;
 
-
 	[SerializeField]
 	private float defaultSoundVolume = 0.8f;
 
@@ -27,10 +26,12 @@ public class OptionsController : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
     {
+
 		// This is for menu options issue with synchronising sliders' values
 		soundSlider.value = GameManager.Instance.VolumeSoundSliderMainController.value;
 
 		musicSlider.value = GameManager.Instance.VolumeMusicSliderMainController.value;
+		//Debug.Log(musicSlider.value);
 
 		// Setting sound volume
 		soundSlider.value = PlayerPrefsController.GetMasterSoundVolume();
@@ -49,8 +50,6 @@ public class OptionsController : MonoBehaviour
 			sound.AudioSource.volume = sound.Volume;
 		}
 
-	
-
 		// Setting music volume
 		musicSlider.value = PlayerPrefsController.GetMasterMusicVolume();
 		previousMusicVolume = musicSlider.value;
@@ -58,8 +57,6 @@ public class OptionsController : MonoBehaviour
 
 		SoundManager.Instance.GetMusic().Volume = musicSlider.value;
 		SoundManager.Instance.GetMusic().AudioSource.volume = SoundManager.Instance.GetMusic().Volume;
-
-
 	}
 
 	// Update is called once per frame

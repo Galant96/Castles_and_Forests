@@ -17,11 +17,11 @@ public class PlayerPrefsController : MonoBehaviour
 		if (volume >= MIN_SOUND_VOLUME && volume <= MAX_SOUND_VOLUME)
 		{
 			PlayerPrefs.SetFloat(MASTER_SOUND_VOLUME_KEY, volume);
-			Debug.LogError("Master volume set to " + volume);
+			Debug.LogError("Master sound volume set to " + volume);
 		}
 		else
 		{
-			Debug.LogError("Master volume is out of range");
+			Debug.LogError("Master sound volume is out of range");
 		}
 	}
 
@@ -35,11 +35,11 @@ public class PlayerPrefsController : MonoBehaviour
 		if (volume >= MIN_MUSIC_VOLUME && volume <= MAX_MUSIC_VOLUME)
 		{
 			PlayerPrefs.SetFloat(MASTER_MUSIC_VOLUME_KEY, volume);
-			Debug.LogError("Master volume set to " + volume);
+			Debug.LogError("Master music volume set to " + volume);
 		}
 		else
 		{
-			Debug.LogError("Master volume is out of range");
+			Debug.LogError("Master music volume is out of range");
 		}
 	}
 

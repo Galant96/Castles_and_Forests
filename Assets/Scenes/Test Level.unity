@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -22258,11 +22258,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 186601514}
-    - target: {fileID: 3670544866726264742, guid: aad1e775cf1c79d40803f2df47e7c91b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 460126611, guid: aad1e775cf1c79d40803f2df47e7c91b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -22286,6 +22281,11 @@ PrefabInstance:
     - target: {fileID: 1380603502, guid: aad1e775cf1c79d40803f2df47e7c91b, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3670544866726264742, guid: aad1e775cf1c79d40803f2df47e7c91b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aad1e775cf1c79d40803f2df47e7c91b, type: 3}
@@ -22866,18 +22866,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68578197f490b3344927bbc885b06596, type: 3}
---- !u!114 &4921137571673438873 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8555433667544700642, guid: aad1e775cf1c79d40803f2df47e7c91b,
-    type: 3}
-  m_PrefabInstance: {fileID: 3670544866687265915}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b80688b92c12b774083673f78dd7cf93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &5175519418056392939
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26450,9 +26438,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5851744001148200706, guid: df1695dfaa61dd04c8159d6e3668a0c4,
         type: 3}
+      propertyPath: onMechanismWork.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5851744001148200706, guid: df1695dfaa61dd04c8159d6e3668a0c4,
+        type: 3}
       propertyPath: OnGetReward.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 4921137571673438873}
+      objectReference: {fileID: 626611911}
+    - target: {fileID: 5851744001148200706, guid: df1695dfaa61dd04c8159d6e3668a0c4,
+        type: 3}
+      propertyPath: onMechanismWork.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5851744001148200706, guid: df1695dfaa61dd04c8159d6e3668a0c4,
+        type: 3}
+      propertyPath: onMechanismWork.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5851744001148200706, guid: df1695dfaa61dd04c8159d6e3668a0c4,
+        type: 3}
+      propertyPath: OnGetReward.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GetTreasure
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df1695dfaa61dd04c8159d6e3668a0c4, type: 3}
 --- !u!1001 &5980070959003207775
@@ -27734,7 +27742,7 @@ PrefabInstance:
     - target: {fileID: 7864864337859395875, guid: 2a1e046c3e7c3294c956c46601e2df2a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.43
+      value: 50.57
       objectReference: {fileID: 0}
     - target: {fileID: 7864864337859395875, guid: 2a1e046c3e7c3294c956c46601e2df2a,
         type: 3}
